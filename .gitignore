@@ -24,6 +24,8 @@ coverage/
 .mypy_cache/
 playwright-report/
 test-results/
+# scratch webm from `pnpm demo:gif`; the GIFs it renders live in docs/media/
+apps/web/.demo-video/
 
 # local env + secrets (never commit)
 .env

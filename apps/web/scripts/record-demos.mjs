@@ -203,13 +203,16 @@ const scenes = [
       await page.getByRole('heading', { name: 'Crop Health' }).waitFor();
       await beat(page, 1200);
 
-      await click(page, page.getByRole('button', { name: /^Critical/ }).first(), { settle: 1100 });
+      // Anchored on the count the filter prints: the plain severity words also label
+      // every marker on the field map, and those are 2.8-px circles behind an overlay.
+      const filter = (severity) =>
+        page.getByRole('button', { name: new RegExp(`^${severity} \\d+$`) });
+      const hotspots = page.getByRole('list', { name: /hotspots$/ }).getByRole('button');
 
-      const hotspots = page.getByRole('button', { name: /plants? · Rows?/ });
+      await click(page, filter('Critical'), { settle: 1100 });
       await click(page, hotspots.first(), { settle: 1500 });
       await click(page, hotspots.nth(1), { settle: 1500 });
-
-      await click(page, page.getByRole('button', { name: /^Moderate/ }).first(), { settle: 1200 });
+      await click(page, filter('Moderate'), { settle: 1200 });
       await beat(page, 1200);
     },
   },

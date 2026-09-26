@@ -33,7 +33,14 @@ export default tseslint.config(
     // generated on stdout is the point of them.
     files: ['**/scripts/**/*.{js,mjs,ts}', '**/*.config.{js,mjs,ts}', '**/vitest.setup.ts'],
     languageOptions: {
-      globals: { console: 'readonly', process: 'readonly', URL: 'readonly' },
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        URL: 'readonly',
+        fetch: 'readonly',
+        AbortSignal: 'readonly',
+        setTimeout: 'readonly',
+      },
     },
     rules: { 'no-console': 'off' },
   },

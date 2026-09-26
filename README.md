@@ -12,6 +12,37 @@ that speaks exactly the same protocol, so the whole stack runs end to end with n
 > See [docs/PLAN.md](docs/PLAN.md) for what each phase adds and
 > [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the design.
 
+## What it looks like
+
+Recorded against a production build with Playwright driving a real Chromium — every value
+on screen comes from the exported fixtures, and the "Simulated" badges are the app saying
+so. To re-record after a UI change: `pnpm --filter @agri/web demo:gif [scene ...]`
+(needs `ffmpeg` and a `pnpm build`; the scenes live in
+[apps/web/scripts/record-demos.mjs](apps/web/scripts/record-demos.mjs)).
+
+**The store** — browse the apps, filter by the job at hand, open one. There is no sign-in
+step: the platform has no accounts yet, so the store is the entry point.
+
+![Browsing the store and opening Crop Watch](docs/media/store.gif)
+
+**Crop Scout** — drive the robot, watch both cameras, read what it flagged and where.
+
+![Driving the robot and inspecting a flagged plant](docs/media/crop-scout.gif)
+
+**Mission Planner** — pick a coverage pattern, switch modes, arm the sprayer. Only
+autonomous mode can start a mission; remote control hides the button rather than
+disabling it.
+
+![Planning a route and arming the sprayer](docs/media/mission-planner.gif)
+
+**Crop Health** — filter the hotspots by severity and open one to see it on the field map.
+
+![Filtering hotspots by severity](docs/media/crop-health.gif)
+
+**Crop Chat** — ask about the field, in the operator's own language.
+
+![Asking about the field in English and Kannada](docs/media/crop-chat.gif)
+
 ## Quick start
 
 Requirements: Docker with Compose v2, Node 20 with pnpm 9, and [uv](https://docs.astral.sh/uv/).
