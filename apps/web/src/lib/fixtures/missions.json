@@ -1,0 +1,341 @@
+{
+  "missions": [
+    {
+      "id": "8e28bc93-a313-4c9f-aa51-81a33e965bc1",
+      "name": "B-4 full coverage",
+      "mode": "autonomous",
+      "pattern": "snake",
+      "status": "completed",
+      "auto_spray": true,
+      "speed_mps": 0.8,
+      "started_at": "2026-09-24T09:46:44Z",
+      "ended_at": "2026-09-24T10:33:44Z",
+      "distance_travelled_m": 900.0,
+      "failure_reason": null,
+      "created_at": "2026-09-25T11:46:44.544225Z",
+      "waypoints": [
+        {
+          "seq": 0,
+          "lat": 51.984,
+          "lon": 5.662,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T09:46:44Z"
+        },
+        {
+          "seq": 1,
+          "lat": 51.9848983,
+          "lon": 5.662,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T09:49:44Z"
+        },
+        {
+          "seq": 2,
+          "lat": 51.9848983,
+          "lon": 5.6620219,
+          "heading_deg": 180.0,
+          "reached_at": "2026-09-24T09:51:44Z"
+        },
+        {
+          "seq": 3,
+          "lat": 51.984,
+          "lon": 5.6620219,
+          "heading_deg": 180.0,
+          "reached_at": "2026-09-24T09:54:44Z"
+        },
+        {
+          "seq": 4,
+          "lat": 51.984,
+          "lon": 5.6620438,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T09:56:44Z"
+        },
+        {
+          "seq": 5,
+          "lat": 51.9848983,
+          "lon": 5.6620438,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T09:59:44Z"
+        },
+        {
+          "seq": 6,
+          "lat": 51.9848983,
+          "lon": 5.6620656,
+          "heading_deg": 180.0,
+          "reached_at": "2026-09-24T10:02:44Z"
+        },
+        {
+          "seq": 7,
+          "lat": 51.984,
+          "lon": 5.6620656,
+          "heading_deg": 180.0,
+          "reached_at": "2026-09-24T10:04:44Z"
+        },
+        {
+          "seq": 8,
+          "lat": 51.984,
+          "lon": 5.6620875,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T10:07:44Z"
+        },
+        {
+          "seq": 9,
+          "lat": 51.9848983,
+          "lon": 5.6620875,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T10:09:44Z"
+        },
+        {
+          "seq": 10,
+          "lat": 51.9848983,
+          "lon": 5.6621094,
+          "heading_deg": 180.0,
+          "reached_at": "2026-09-24T10:12:44Z"
+        },
+        {
+          "seq": 11,
+          "lat": 51.984,
+          "lon": 5.6621094,
+          "heading_deg": 180.0,
+          "reached_at": "2026-09-24T10:15:44Z"
+        },
+        {
+          "seq": 12,
+          "lat": 51.984,
+          "lon": 5.6621313,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T10:17:44Z"
+        },
+        {
+          "seq": 13,
+          "lat": 51.9848983,
+          "lon": 5.6621313,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T10:20:44Z"
+        },
+        {
+          "seq": 14,
+          "lat": 51.9848983,
+          "lon": 5.6621532,
+          "heading_deg": 180.0,
+          "reached_at": "2026-09-24T10:22:44Z"
+        },
+        {
+          "seq": 15,
+          "lat": 51.984,
+          "lon": 5.6621532,
+          "heading_deg": 180.0,
+          "reached_at": "2026-09-24T10:25:44Z"
+        },
+        {
+          "seq": 16,
+          "lat": 51.984,
+          "lon": 5.662175,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T10:28:44Z"
+        },
+        {
+          "seq": 17,
+          "lat": 51.9848983,
+          "lon": 5.662175,
+          "heading_deg": 0.0,
+          "reached_at": "2026-09-24T10:30:44Z"
+        }
+      ],
+      "spray_events": [
+        {
+          "id": "f6d44366-14dd-4949-aa63-590214eb0377",
+          "sprayed_at": "2026-09-24T09:49:44Z",
+          "location": {
+            "lat": 51.9841167,
+            "lon": 5.6621313
+          },
+          "duration_ms": 1090,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.033,
+          "auto": true,
+          "detection_id": "93c4a381-0d6f-49d9-8614-f758188be4be",
+          "source": "sim"
+        },
+        {
+          "id": "b3964bbc-15cc-42d3-8c2d-c364f001497b",
+          "sprayed_at": "2026-09-24T09:53:44Z",
+          "location": {
+            "lat": 51.9840893,
+            "lon": 5.662175
+          },
+          "duration_ms": 1743,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.052,
+          "auto": true,
+          "detection_id": "00e37a8d-f2ea-46a7-85e2-bc7366fb926b",
+          "source": "sim"
+        },
+        {
+          "id": "adeae257-aa35-47a7-bee4-c60f22d5892b",
+          "sprayed_at": "2026-09-24T09:57:44Z",
+          "location": {
+            "lat": 51.9845632,
+            "lon": 5.6621094
+          },
+          "duration_ms": 1337,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.04,
+          "auto": true,
+          "detection_id": "ad4c6137-7aa7-47f9-a2ff-3c3610630285",
+          "source": "sim"
+        },
+        {
+          "id": "52f87756-0546-4c33-92b4-de50a3c84a08",
+          "sprayed_at": "2026-09-24T10:01:44Z",
+          "location": {
+            "lat": 51.9843339,
+            "lon": 5.6621313
+          },
+          "duration_ms": 1684,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.051,
+          "auto": true,
+          "detection_id": "757555f0-86ba-4bf6-b5b8-c6fed0c88ddc",
+          "source": "sim"
+        },
+        {
+          "id": "5f840a8a-14e6-4530-be00-0774fc827c32",
+          "sprayed_at": "2026-09-24T10:05:44Z",
+          "location": {
+            "lat": 51.9843584,
+            "lon": 5.6621532
+          },
+          "duration_ms": 938,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.028,
+          "auto": true,
+          "detection_id": "779e0b78-5ef0-4774-8c46-5d517ff1e7fc",
+          "source": "sim"
+        },
+        {
+          "id": "8adadf7d-04f4-4bf2-bdb2-420994808ba2",
+          "sprayed_at": "2026-09-24T10:09:44Z",
+          "location": {
+            "lat": 51.9847317,
+            "lon": 5.6621094
+          },
+          "duration_ms": 1312,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.039,
+          "auto": true,
+          "detection_id": "9df7c823-29db-48df-a8f0-43676d62ddee",
+          "source": "sim"
+        },
+        {
+          "id": "b85dc77a-03a1-41bc-a6e7-a7850cc83e76",
+          "sprayed_at": "2026-09-24T10:13:44Z",
+          "location": {
+            "lat": 51.9843415,
+            "lon": 5.6621532
+          },
+          "duration_ms": 1442,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.043,
+          "auto": true,
+          "detection_id": "0761a9b2-b198-4be4-8498-637b686449f9",
+          "source": "sim"
+        },
+        {
+          "id": "6e0253b6-f0a9-4717-8185-a5f54c22740d",
+          "sprayed_at": "2026-09-24T10:17:44Z",
+          "location": {
+            "lat": 51.9840625,
+            "lon": 5.6621313
+          },
+          "duration_ms": 957,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.029,
+          "auto": true,
+          "detection_id": "0eee6c27-59df-4ff3-b035-b0f3993b4d36",
+          "source": "sim"
+        },
+        {
+          "id": "e93fd1e6-bdad-4393-87ef-ce62fc26479b",
+          "sprayed_at": "2026-09-24T10:21:44Z",
+          "location": {
+            "lat": 51.9848516,
+            "lon": 5.6621532
+          },
+          "duration_ms": 1494,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.045,
+          "auto": true,
+          "detection_id": "3b31eae7-39b7-4f7f-b1e4-345db54473b4",
+          "source": "sim"
+        },
+        {
+          "id": "381990de-72da-4200-a286-4d4dc99587ff",
+          "sprayed_at": "2026-09-24T10:25:44Z",
+          "location": {
+            "lat": 51.9842854,
+            "lon": 5.662175
+          },
+          "duration_ms": 1752,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.053,
+          "auto": true,
+          "detection_id": "418d7a7c-dbb8-4405-a733-3a53c8861b1a",
+          "source": "sim"
+        },
+        {
+          "id": "9dac5677-8e00-45d4-9ab2-bf0bbf585a0f",
+          "sprayed_at": "2026-09-24T10:29:44Z",
+          "location": {
+            "lat": 51.9843658,
+            "lon": 5.6621094
+          },
+          "duration_ms": 1456,
+          "flow_lpm": 1.8,
+          "arc_deg": 180,
+          "nozzle_height_cm": 45.0,
+          "litres": 0.044,
+          "auto": true,
+          "detection_id": "2945718d-a6f0-4eb8-9c1f-43b679038094",
+          "source": "sim"
+        }
+      ]
+    },
+    {
+      "id": "f63957f4-abf7-4105-a362-06a8f6b26243",
+      "name": "Row 7 spot check",
+      "mode": "remote_control",
+      "pattern": null,
+      "status": "completed",
+      "auto_spray": false,
+      "speed_mps": 0.4,
+      "started_at": "2026-09-25T06:46:44Z",
+      "ended_at": "2026-09-25T07:08:44Z",
+      "distance_travelled_m": 86.4,
+      "failure_reason": null,
+      "created_at": "2026-09-25T11:46:44.544225Z",
+      "waypoints": [],
+      "spray_events": []
+    }
+  ],
+  "next_cursor": null
+}

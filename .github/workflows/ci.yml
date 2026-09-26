@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Never a real secret: CI only needs a syntactically valid value.
+  AGRI_JWT_SECRET: ci-only-not-a-real-secret
+
+jobs:
+  web:
+    name: Web (lint, typecheck, unit, build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run format:check
+      - run: pnpm run lint
+      - run: pnpm run typecheck
+      - run: pnpm run test
+      - run: pnpm run build
+
+  python:
+    name: Python (${{ matrix.service }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        service: [api, sim-robot]
+    defaults:
+      run:
+        working-directory: services/${{ matrix.service }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run mypy src
+      - run: uv run pytest
+
+  compose:
+    name: Stack boots
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bootstrap secrets, certs and broker credentials
+        run: |
+          ./infra/scripts/gen-env.sh
+          ./infra/scripts/gen-certs.sh
+          ./infra/scripts/gen-broker-auth.sh
+          ./infra/scripts/gen-s3-auth.sh
+      - name: Bring the stack up
+        run: docker compose -f infra/docker-compose.yml --env-file .env up --build -d --wait --wait-timeout 420
+      - name: Health
+        run: |
+          curl -fsS http://localhost:8000/healthz
+          curl -fsS -o /dev/null -w '%{http_code}\n' http://localhost:3000/
+      - name: Logs on failure
+        if: failure()
+        run: docker compose -f infra/docker-compose.yml --env-file .env logs --tail=200
+      - name: Tear down
+        if: always()
+        run: docker compose -f infra/docker-compose.yml --env-file .env down -v
+
+  # Playwright end-to-end tests are added in Phase 4, when there is a store to drive.

@@ -1,0 +1,82 @@
+{
+  "runs": [
+    {
+      "id": "4aa7406c-c0dd-4d53-88c9-1fca970e886b",
+      "status": "completed",
+      "started_at": "2026-09-25T07:10:00Z",
+      "ended_at": "2026-09-25T07:53:00Z",
+      "plants_scanned": 1800,
+      "plants_flagged": 37,
+      "infection_rate": 0.02056,
+      "distance_m": 912.0,
+      "source": "sim"
+    },
+    {
+      "id": "3477dc3d-836b-436b-86cf-e359e9b59fc8",
+      "status": "completed",
+      "started_at": "2026-09-24T07:10:00Z",
+      "ended_at": "2026-09-24T08:02:00Z",
+      "plants_scanned": 1800,
+      "plants_flagged": 28,
+      "infection_rate": 0.01556,
+      "distance_m": 912.0,
+      "source": "sim"
+    },
+    {
+      "id": "b99a87f6-cfb3-4b54-9bb9-7f73f8cbd0c4",
+      "status": "completed",
+      "started_at": "2026-09-23T07:10:00Z",
+      "ended_at": "2026-09-23T07:56:00Z",
+      "plants_scanned": 1800,
+      "plants_flagged": 30,
+      "infection_rate": 0.01667,
+      "distance_m": 912.0,
+      "source": "sim"
+    },
+    {
+      "id": "e8b777ff-8418-4610-aafa-fa5d81c2c6ca",
+      "status": "completed",
+      "started_at": "2026-09-22T07:10:00Z",
+      "ended_at": "2026-09-22T07:57:00Z",
+      "plants_scanned": 1800,
+      "plants_flagged": 21,
+      "infection_rate": 0.01167,
+      "distance_m": 912.0,
+      "source": "sim"
+    },
+    {
+      "id": "b5e3b77b-3b47-4a26-b21d-0efde8dbb2cf",
+      "status": "completed",
+      "started_at": "2026-09-21T07:10:00Z",
+      "ended_at": "2026-09-21T07:55:00Z",
+      "plants_scanned": 1800,
+      "plants_flagged": 19,
+      "infection_rate": 0.01056,
+      "distance_m": 912.0,
+      "source": "sim"
+    },
+    {
+      "id": "1ea8624d-2d74-41ad-aea6-80a936d443b7",
+      "status": "completed",
+      "started_at": "2026-09-20T07:10:00Z",
+      "ended_at": "2026-09-20T07:59:00Z",
+      "plants_scanned": 1800,
+      "plants_flagged": 15,
+      "infection_rate": 0.00833,
+      "distance_m": 912.0,
+      "source": "sim"
+    },
+    {
+      "id": "0af6020a-8c04-47a3-b7c6-fc50230ad71d",
+      "status": "completed",
+      "started_at": "2026-09-19T07:10:00Z",
+      "ended_at": "2026-09-19T07:54:00Z",
+      "plants_scanned": 1800,
+      "plants_flagged": 11,
+      "infection_rate": 0.00611,
+      "distance_m": 912.0,
+      "source": "sim"
+    }
+  ],
+  "next_cursor": null
+}

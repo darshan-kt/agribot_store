@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/down/cmd-mission.json",
+  "title": "MissionCommand",
+  "description": "QoS 1 on agri/v1/{robot_id}/cmd/mission. The bridge maps 'start' onto a Nav2 NavigateThroughPoses goal.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["action", "mission_id", "issued_by"],
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": ["start", "pause", "resume", "cancel"]
+    },
+    "mission_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "pattern": {
+      "$ref": "../common/envelope.json#/$defs/MissionPattern"
+    },
+    "waypoints": {
+      "type": "array",
+      "maxItems": 2000,
+      "description": "Ordered. Required for 'start', ignored otherwise. Snake and perimeter patterns are expanded to explicit waypoints by the backend, so the robot receives one uniform representation.",
+      "items": {
+        "type": "object",
+        "title": "Waypoint",
+        "required": ["seq", "lat", "lon"],
+        "properties": {
+          "seq": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "lat": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+          },
+          "lon": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          },
+          "heading_deg": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "exclusiveMaximum": 360
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "speed_mps": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 5
+    },
+    "auto_spray": {
+      "type": "boolean",
+      "description": "Spray flagged plants during the run. Has no effect unless the sprayer is separately armed: this flag cannot arm it."
+    },
+    "issued_by": {
+      "type": "string",
+      "format": "uuid",
+      "description": "User id of the operator. Written to audit_log with the command; every command is attributable to a person."
+    },
+    "lease_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "Control lease held by that operator. The backend rejects a command whose lease has expired or is held by someone else."
+    }
+  },
+  "unevaluatedProperties": false
+}

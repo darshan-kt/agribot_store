@@ -1,0 +1,12 @@
+pnpm-lock.yaml
+uv.lock
+.next/
+dist/
+coverage/
+.turbo/
+robot/ros2_ws/install/
+robot/ros2_ws/build/
+AGRI_ROBOT_APPSTORE_PROMPT.md
+packages/contracts/src/generated/
+# Exported from the database by `make fixtures`; the exporter owns their formatting.
+apps/web/src/lib/fixtures/

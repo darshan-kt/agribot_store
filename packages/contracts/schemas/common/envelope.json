@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/common/envelope.json",
+  "title": "Envelope",
+  "description": "Fields carried by every message on every topic, in both directions.",
+  "type": "object",
+  "required": ["schema_version", "robot_id", "ts", "seq", "source"],
+  "properties": {
+    "schema_version": {
+      "$ref": "#/$defs/SchemaVersion"
+    },
+    "robot_id": {
+      "$ref": "#/$defs/RobotId"
+    },
+    "ts": {
+      "$ref": "#/$defs/TimestampNs"
+    },
+    "seq": {
+      "$ref": "#/$defs/Seq"
+    },
+    "source": {
+      "$ref": "#/$defs/Source"
+    }
+  },
+  "$defs": {
+    "SchemaVersion": {
+      "title": "SchemaVersion",
+      "description": "Semantic version of the payload schema. Frozen at 1.0.0 from the end of Phase 1; a breaking change requires a new major and a new topic namespace.",
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "examples": ["1.0.0"]
+    },
+    "RobotId": {
+      "title": "RobotId",
+      "description": "Stable robot identifier. Also the MQTT username, client id and topic segment, so a robot cannot speak for another.",
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,62}$",
+      "examples": ["scout-01"]
+    },
+    "TimestampNs": {
+      "title": "TimestampNs",
+      "description": "UTC nanoseconds since the Unix epoch, taken from the publisher's clock. The server records its own receive time separately; data age shown to an operator is always computed from the server clock, never this one.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "Seq": {
+      "title": "Seq",
+      "description": "Monotonic counter per (robot, topic). Used to drop out-of-order messages, deduplicate redelivered QoS 1 messages, and resume a WebSocket from the last frame the client saw.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "Source": {
+      "title": "Source",
+      "description": "Where the value came from. Set by the publisher and passed through the backend untouched. The 'Simulated' badge in the UI is driven by this field and nothing else: there is no frontend flag that can suppress it. Uplink messages are only ever 'sim' or 'robot'; 'cloud' appears only on downlink commands, whose origin is the operator, not a sensor.",
+      "type": "string",
+      "enum": ["sim", "robot", "cloud"]
+    },
+    "Severity": {
+      "title": "Severity",
+      "description": "Crop issue severity. Always paired with its text label in the UI; the three colours differ in lightness as well as hue so they survive greyscale and colour-vision deficiency.",
+      "type": "string",
+      "enum": ["low", "moderate", "critical"]
+    },
+    "CameraSide": {
+      "title": "CameraSide",
+      "type": "string",
+      "enum": ["left", "right"]
+    },
+    "SensorStatus": {
+      "title": "SensorStatus",
+      "description": "Plain two-state health for a farmer-facing list, plus 'fault' for a sensor that is not reporting at all.",
+      "type": "string",
+      "enum": ["ok", "check", "fault"]
+    },
+    "LatLon": {
+      "title": "LatLon",
+      "type": "object",
+      "required": ["lat", "lon"],
+      "properties": {
+        "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+        "lon": { "type": "number", "minimum": -180, "maximum": 180 }
+      },
+      "additionalProperties": false
+    },
+    "BoundingBox": {
+      "title": "BoundingBox",
+      "description": "Normalised to the frame: 0,0 is top-left, 1,1 is bottom-right. Resolution-independent, so a box drawn on a 320x240 fallback frame lands in the same place on a 1920x1080 WebRTC frame.",
+      "type": "object",
+      "required": ["x", "y", "w", "h"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 },
+        "w": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+        "h": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "SpeedMode": {
+      "title": "SpeedMode",
+      "type": "string",
+      "enum": ["slow", "normal", "fast"]
+    },
+    "MissionPattern": {
+      "title": "MissionPattern",
+      "type": "string",
+      "enum": ["snake", "perimeter", "custom"]
+    },
+    "MissionStatus": {
+      "title": "MissionStatus",
+      "type": "string",
+      "enum": ["pending", "running", "paused", "completed", "failed", "cancelled"]
+    },
+    "SprayArc": {
+      "title": "SprayArc",
+      "description": "Spray rotation: 180 degrees covers the front only, 360 covers the full circle.",
+      "type": "integer",
+      "enum": [180, 360]
+    },
+    "RobotMode": {
+      "title": "RobotMode",
+      "type": "string",
+      "enum": ["idle", "teleop", "mission", "estop", "charging", "fault"]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/down/cmd-estop.json",
+  "title": "EstopCommand",
+  "description": "QoS 1 on agri/v1/{robot_id}/cmd/estop, its own topic so it can never queue behind telemetry.\n\nSAFETY: idempotent \u2014 engaging an already-engaged e-stop is a no-op, so the UI may retry freely. It bypasses the control-lease check and the rate limiter: any authenticated operator with a control-capable role may stop a robot, including one they do not hold the lease on. Releasing is NOT the inverse of engaging: `engage: false` is an explicit reset that a human must choose, and the robot will not resume motion on its own afterwards.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["engage", "issued_by"],
+  "properties": {
+    "engage": {
+      "type": "boolean",
+      "description": "True engages and latches. False is an operator reset, allowed only once the cause is cleared."
+    },
+    "reason": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "issued_by": {
+      "type": "string",
+      "format": "uuid",
+      "description": "User id of the operator. Written to audit_log with the command; every command is attributable to a person."
+    },
+    "lease_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "Control lease held by that operator. The backend rejects a command whose lease has expired or is held by someone else."
+    }
+  },
+  "unevaluatedProperties": false
+}

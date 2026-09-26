@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/mission-progress.json",
+  "title": "MissionProgress",
+  "description": "QoS 1 on agri/v1/{robot_id}/mission/progress, published on every state change rather than on a timer.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["mission_id", "status", "total_waypoints"],
+  "properties": {
+    "mission_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "status": {
+      "$ref": "../common/envelope.json#/$defs/MissionStatus"
+    },
+    "pattern": {
+      "$ref": "../common/envelope.json#/$defs/MissionPattern"
+    },
+    "current_waypoint_index": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "total_waypoints": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "distance_travelled_m": {
+      "type": "number",
+      "minimum": 0
+    },
+    "eta_s": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "plants_scanned": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "plants_flagged": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "plants_sprayed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "failure_reason": {
+      "type": ["string", "null"],
+      "description": "Present only when status is 'failed'. Surfaced verbatim next to a retry action, because a mission that stopped without a reason is worse than one that failed loudly."
+    }
+  },
+  "unevaluatedProperties": false
+}

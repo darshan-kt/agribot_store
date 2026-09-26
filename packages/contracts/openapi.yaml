@@ -1,0 +1,921 @@
+openapi: 3.1.0
+info:
+  title: Agri Robot App Store API
+  version: 1.0.0
+  description: |
+    REST surface for the store and the four apps.
+
+    **This document is the contract, hand-authored rather than generated from an
+    implementation.** The backend implements it; `pnpm gen` generates the TypeScript
+    client from it. Neither side is the other's derivative.
+
+    Conventions:
+      * All timestamps are RFC 3339 with an explicit UTC offset. The nanosecond `ts`
+        used on MQTT appears only inside embedded payloads.
+      * Every resource that originates from a robot carries `source`, which is the only
+        thing that drives the "Simulated" badge in the UI.
+      * List endpoints are cursor-paginated. Offsets are not offered: detections arrive
+        continuously and page 2 of an offset-paginated list is a lie.
+      * Errors use RFC 9457 `application/problem+json`.
+
+servers:
+  - url: /api/v1
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: store
+  - name: robots
+  - name: fields
+  - name: missions
+  - name: scouting
+  - name: analytics
+  - name: inspections
+  - name: config
+  - name: exports
+
+paths:
+  /store/apps:
+    get:
+      tags: [store]
+      summary: The store catalog, with live badges for one robot
+      description: |
+        Badges are computed per request, never stored. A badge that can go stale is worse
+        than no badge, so "14 critical" is a count taken at read time.
+      parameters:
+        - name: robot_id
+          in: query
+          schema: { type: string }
+          description: Compute badges against this robot. Omit for the catalog alone.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [apps]
+                properties:
+                  apps:
+                    type: array
+                    items: { $ref: '#/components/schemas/StoreApp' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /robots:
+    get:
+      tags: [robots]
+      summary: Robots visible to the caller
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [robots]
+                properties:
+                  robots:
+                    type: array
+                    items: { $ref: '#/components/schemas/Robot' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /robots/{robot_id}:
+    parameters: [{ $ref: '#/components/parameters/RobotId' }]
+    get:
+      tags: [robots]
+      summary: One robot, with its current state and sensors
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RobotDetail' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /robots/{robot_id}/telemetry:
+    parameters: [{ $ref: '#/components/parameters/RobotId' }]
+    get:
+      tags: [robots]
+      summary: Telemetry history
+      description: Served from the 1-minute continuous aggregate unless `resolution=raw`.
+      parameters:
+        - name: from
+          in: query
+          required: true
+          schema: { type: string, format: date-time }
+        - name: to
+          in: query
+          schema: { type: string, format: date-time }
+        - name: resolution
+          in: query
+          schema: { type: string, enum: [raw, minute], default: minute }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [samples, resolution]
+                properties:
+                  resolution: { type: string, enum: [raw, minute] }
+                  samples:
+                    type: array
+                    items: { $ref: '#/components/schemas/TelemetrySample' }
+
+  /robots/{robot_id}/config:
+    parameters: [{ $ref: '#/components/parameters/RobotId' }]
+    get:
+      tags: [config]
+      summary: Configuration history, newest first
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [versions]
+                properties:
+                  versions:
+                    type: array
+                    items: { $ref: '#/components/schemas/ConfigVersion' }
+    post:
+      tags: [config]
+      summary: Propose a new configuration version
+      description: |
+        Returns immediately with `acked_at: null`. The change is **pending** until the
+        robot confirms it on `config/ack`; the UI must not show it as applied before then.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ConfigInput' }
+      responses:
+        '202':
+          description: Accepted and published to the robot
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ConfigVersion' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+
+  /fields:
+    get:
+      tags: [fields]
+      summary: Fields, as GeoJSON geometry
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [fields]
+                properties:
+                  fields:
+                    type: array
+                    items: { $ref: '#/components/schemas/Field' }
+
+  /fields/{field_id}:
+    parameters: [{ $ref: '#/components/parameters/FieldId' }]
+    get:
+      tags: [fields]
+      summary: One field with its rows
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/FieldDetail' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /missions:
+    get:
+      tags: [missions]
+      summary: Missions, newest first
+      parameters:
+        - { name: robot_id, in: query, schema: { type: string } }
+        - { name: status, in: query, schema: { $ref: '#/components/schemas/MissionStatus' } }
+        - { $ref: '#/components/parameters/Cursor' }
+        - { $ref: '#/components/parameters/Limit' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [missions]
+                properties:
+                  missions:
+                    type: array
+                    items: { $ref: '#/components/schemas/Mission' }
+                  next_cursor: { type: [string, 'null'] }
+    post:
+      tags: [missions]
+      summary: Create a mission
+      description: |
+        Snake and perimeter patterns are expanded into explicit waypoints server-side, so
+        the robot receives one uniform representation whatever the operator drew.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/MissionInput' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/MissionDetail' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /missions/{mission_id}:
+    parameters: [{ $ref: '#/components/parameters/MissionId' }]
+    get:
+      tags: [missions]
+      summary: One mission with its waypoints and spray events
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/MissionDetail' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /missions/{mission_id}/actions:
+    parameters: [{ $ref: '#/components/parameters/MissionId' }]
+    post:
+      tags: [missions]
+      summary: Start, pause, resume or cancel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [action]
+              properties:
+                action: { type: string, enum: [start, pause, resume, cancel] }
+      responses:
+        '202': { description: Command published to the robot }
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '409':
+          description: Refused by a safety precondition or the control lease
+          content:
+            application/problem+json:
+              schema: { $ref: '#/components/schemas/CommandRefusal' }
+
+  /scout-runs:
+    get:
+      tags: [scouting]
+      summary: Scouting runs, newest first
+      parameters:
+        - { name: field_id, in: query, schema: { type: string, format: uuid } }
+        - { $ref: '#/components/parameters/Cursor' }
+        - { $ref: '#/components/parameters/Limit' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [runs]
+                properties:
+                  runs:
+                    type: array
+                    items: { $ref: '#/components/schemas/ScoutRun' }
+                  next_cursor: { type: [string, 'null'] }
+
+  /detections:
+    get:
+      tags: [scouting]
+      summary: Detections, filterable
+      parameters:
+        - { name: field_id, in: query, schema: { type: string, format: uuid } }
+        - { name: run_id, in: query, schema: { type: string, format: uuid } }
+        - { name: severity, in: query, schema: { $ref: '#/components/schemas/Severity' } }
+        - { name: issue_code, in: query, schema: { type: string } }
+        - { name: row, in: query, schema: { type: integer } }
+        - { name: uninspected, in: query, schema: { type: boolean } }
+        - { name: from, in: query, schema: { type: string, format: date-time } }
+        - { $ref: '#/components/parameters/Cursor' }
+        - { $ref: '#/components/parameters/Limit' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [detections]
+                properties:
+                  detections:
+                    type: array
+                    items: { $ref: '#/components/schemas/Detection' }
+                  next_cursor: { type: [string, 'null'] }
+
+  /detections/{detection_id}:
+    parameters: [{ $ref: '#/components/parameters/DetectionId' }]
+    get:
+      tags: [scouting]
+      summary: One detection with its issue guidance and inspection history
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/DetectionDetail' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /detections/{detection_id}/inspections:
+    parameters: [{ $ref: '#/components/parameters/DetectionId' }]
+    post:
+      tags: [inspections]
+      summary: Record a human verdict
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status: { $ref: '#/components/schemas/InspectionStatus' }
+                note: { type: [string, 'null'], maxLength: 2000 }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Inspection' }
+
+  /analytics/overview:
+    get:
+      tags: [analytics]
+      summary: Everything the Crop Health overview needs, in one request
+      description: |
+        Returns the metric cards, the severity mix, the disease breakdown, the trend
+        series and the single plain-language alert — all computed from the same snapshot,
+        so the sentence and the numbers beside it can never disagree.
+      parameters:
+        - { name: field_id, in: query, required: true, schema: { type: string, format: uuid } }
+        - {
+            name: days,
+            in: query,
+            schema: { type: integer, default: 14, minimum: 1, maximum: 365 },
+          }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalyticsOverview' }
+
+  /analytics/hotspots:
+    get:
+      tags: [analytics]
+      summary: Flagged plants grouped into hotspots
+      parameters:
+        - { name: field_id, in: query, required: true, schema: { type: string, format: uuid } }
+        - { name: severity, in: query, schema: { $ref: '#/components/schemas/Severity' } }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [hotspots]
+                properties:
+                  hotspots:
+                    type: array
+                    items: { $ref: '#/components/schemas/Hotspot' }
+
+  /exports/detections:
+    get:
+      tags: [exports]
+      summary: Export detections as CSV
+      parameters:
+        - { name: field_id, in: query, required: true, schema: { type: string, format: uuid } }
+        - { name: from, in: query, schema: { type: string, format: date-time } }
+      responses:
+        '200':
+          description: CSV
+          content:
+            text/csv:
+              schema: { type: string }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+    RobotId:
+      name: robot_id
+      in: path
+      required: true
+      schema: { type: string }
+    FieldId:
+      name: field_id
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    MissionId:
+      name: mission_id
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    DetectionId:
+      name: detection_id
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    Cursor:
+      name: cursor
+      in: query
+      schema: { type: string }
+    Limit:
+      name: limit
+      in: query
+      schema: { type: integer, default: 50, minimum: 1, maximum: 200 }
+
+  responses:
+    Unauthorized:
+      description: Not authenticated
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+    Forbidden:
+      description: Authenticated but not permitted
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+    NotFound:
+      description: No such resource
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+    Conflict:
+      description: Conflicts with current state
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+    ValidationError:
+      description: The request was well-formed but invalid
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+
+  schemas:
+    Problem:
+      type: object
+      required: [type, title, status]
+      properties:
+        type: { type: string, format: uri }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }
+        instance: { type: string }
+
+    CommandRefusal:
+      allOf:
+        - $ref: '#/components/schemas/Problem'
+        - type: object
+          required: [reason]
+          properties:
+            reason:
+              type: string
+              description: Machine code. The farmer-facing sentence is composed in the UI.
+              enum:
+                [
+                  not_armed,
+                  outside_geofence,
+                  too_fast,
+                  tank_empty,
+                  estop_engaged,
+                  robot_offline,
+                  lease_held,
+                  rate_limited,
+                  hardware_fault,
+                ]
+            lease_holder: { type: [string, 'null'] }
+            lease_expires_at: { type: [string, 'null'], format: date-time }
+
+    Source:
+      type: string
+      enum: [sim, robot, cloud]
+      description: Drives the "Simulated" badge. Never inferred on the client.
+
+    Severity:
+      type: string
+      enum: [low, moderate, critical]
+
+    MissionStatus:
+      type: string
+      enum: [pending, running, paused, completed, failed, cancelled]
+
+    InspectionStatus:
+      type: string
+      enum: [pending, confirmed, false_positive, treated]
+
+    GeoPoint:
+      type: object
+      required: [lat, lon]
+      properties:
+        lat: { type: number, minimum: -90, maximum: 90 }
+        lon: { type: number, minimum: -180, maximum: 180 }
+
+    StoreApp:
+      type: object
+      required: [id, slug, name, tagline, description, category, icon, featured, route]
+      properties:
+        id: { type: string, format: uuid }
+        slug: { type: string }
+        name: { type: string }
+        tagline: { type: string }
+        description: { type: string }
+        category: { type: string, enum: [field_ops, insights, robot] }
+        icon: { type: string }
+        featured: { type: boolean }
+        flow_position: { type: [integer, 'null'] }
+        route: { type: string }
+        badge:
+          type: [object, 'null']
+          description: Live count for this robot, computed per request.
+          required: [label, tone]
+          properties:
+            label: { type: string, examples: ['14 critical'] }
+            tone: { type: string, enum: [neutral, info, warning, critical] }
+
+    Robot:
+      type: object
+      required: [id, robot_id, name, model, online, estop_engaged, source]
+      properties:
+        id: { type: string, format: uuid }
+        robot_id: { type: string }
+        name: { type: string }
+        model: { type: string }
+        firmware: { type: [string, 'null'] }
+        online: { type: boolean }
+        last_seen_at: { type: [string, 'null'], format: date-time }
+        mode: { type: [string, 'null'] }
+        estop_engaged: { type: boolean }
+        battery_percent: { type: [number, 'null'] }
+        field:
+          { type: [object, 'null'], properties: { id: { type: string }, name: { type: string } } }
+        row: { type: [integer, 'null'] }
+        source: { $ref: '#/components/schemas/Source' }
+
+    RobotDetail:
+      allOf:
+        - $ref: '#/components/schemas/Robot'
+        - type: object
+          properties:
+            sensors:
+              type: array
+              items:
+                type: object
+                required: [sensor, status, readings, updated_at, source]
+                properties:
+                  sensor: { type: string }
+                  status: { type: string, enum: [ok, check, fault] }
+                  readings: { type: object, additionalProperties: true }
+                  updated_at: { type: string, format: date-time }
+                  source: { $ref: '#/components/schemas/Source' }
+            active_config: { $ref: '#/components/schemas/ConfigVersion' }
+
+    TelemetrySample:
+      type: object
+      required: [time]
+      properties:
+        time: { type: string, format: date-time }
+        battery_percent: { type: [number, 'null'] }
+        signal_dbm: { type: [number, 'null'] }
+        speed_mps: { type: [number, 'null'] }
+        cpu_percent: { type: [number, 'null'] }
+        gpu_percent: { type: [number, 'null'] }
+        memory_percent: { type: [number, 'null'] }
+        cpu_temp_c: { type: [number, 'null'] }
+        detection_fps: { type: [number, 'null'] }
+
+    ConfigInput:
+      type: object
+      required:
+        [
+          max_speed_mps,
+          detection_sensitivity,
+          return_to_base_battery_percent,
+          camera_fps,
+          obstacle_stop_enabled,
+        ]
+      properties:
+        max_speed_mps: { type: number, exclusiveMinimum: 0, maximum: 5 }
+        detection_sensitivity: { type: number, minimum: 0, maximum: 1 }
+        return_to_base_battery_percent: { type: integer, minimum: 5, maximum: 95 }
+        camera_fps: { type: integer, minimum: 1, maximum: 60 }
+        obstacle_stop_enabled: { type: boolean }
+
+    ConfigVersion:
+      allOf:
+        - $ref: '#/components/schemas/ConfigInput'
+        - type: object
+          required: [id, version, created_at, acked_at]
+          properties:
+            id: { type: string, format: uuid }
+            version: { type: integer }
+            created_at: { type: string, format: date-time }
+            created_by: { type: [string, 'null'] }
+            acked_at:
+              type: [string, 'null']
+              format: date-time
+              description: Null means pending. The UI must not show it as applied.
+            rejected_reason: { type: [string, 'null'] }
+
+    Field:
+      type: object
+      required: [id, name, crop, row_count, boundary]
+      properties:
+        id: { type: string, format: uuid }
+        name: { type: string }
+        crop: { type: string }
+        row_count: { type: integer }
+        area_hectares: { type: [number, 'null'] }
+        centroid: { $ref: '#/components/schemas/GeoPoint' }
+        boundary:
+          type: object
+          description: GeoJSON Polygon.
+          required: [type, coordinates]
+          properties:
+            type: { type: string, const: Polygon }
+            coordinates:
+              type: array
+              items: { type: array, items: { type: array, items: { type: number } } }
+
+    FieldDetail:
+      allOf:
+        - $ref: '#/components/schemas/Field'
+        - type: object
+          properties:
+            rows:
+              type: array
+              items:
+                type: object
+                required: [row_number, path]
+                properties:
+                  row_number: { type: integer }
+                  length_m: { type: [number, 'null'] }
+                  plant_count: { type: [integer, 'null'] }
+                  path:
+                    type: object
+                    description: GeoJSON LineString.
+                    required: [type, coordinates]
+                    properties:
+                      type: { type: string, const: LineString }
+                      coordinates: { type: array, items: { type: array, items: { type: number } } }
+
+    MissionInput:
+      type: object
+      required: [robot_id, name, mode]
+      properties:
+        robot_id: { type: string }
+        field_id: { type: [string, 'null'], format: uuid }
+        name: { type: string, maxLength: 120 }
+        mode: { type: string, enum: [autonomous, remote_control] }
+        pattern: { type: [string, 'null'], enum: [snake, perimeter, custom, null] }
+        speed_mps: { type: number, exclusiveMinimum: 0, maximum: 5 }
+        auto_spray:
+          type: boolean
+          default: false
+          description: Has no effect unless the sprayer is separately armed.
+        waypoints:
+          type: array
+          description: Required when pattern is `custom`; ignored otherwise.
+          items:
+            type: object
+            required: [seq, lat, lon]
+            properties:
+              seq: { type: integer, minimum: 0 }
+              lat: { type: number }
+              lon: { type: number }
+              heading_deg: { type: [number, 'null'] }
+
+    Mission:
+      type: object
+      required: [id, name, mode, status, auto_spray, created_at]
+      properties:
+        id: { type: string, format: uuid }
+        name: { type: string }
+        mode: { type: string, enum: [autonomous, remote_control] }
+        pattern: { type: [string, 'null'] }
+        status: { $ref: '#/components/schemas/MissionStatus' }
+        auto_spray: { type: boolean }
+        speed_mps: { type: [number, 'null'] }
+        started_at: { type: [string, 'null'], format: date-time }
+        ended_at: { type: [string, 'null'], format: date-time }
+        distance_travelled_m: { type: number }
+        failure_reason: { type: [string, 'null'] }
+        created_at: { type: string, format: date-time }
+
+    MissionDetail:
+      allOf:
+        - $ref: '#/components/schemas/Mission'
+        - type: object
+          properties:
+            waypoints:
+              type: array
+              items:
+                type: object
+                required: [seq, lat, lon]
+                properties:
+                  seq: { type: integer }
+                  lat: { type: number }
+                  lon: { type: number }
+                  heading_deg: { type: [number, 'null'] }
+                  reached_at: { type: [string, 'null'], format: date-time }
+            spray_events:
+              type: array
+              items: { $ref: '#/components/schemas/SprayEvent' }
+
+    SprayEvent:
+      type: object
+      required: [id, sprayed_at, location, litres, arc_deg, nozzle_height_cm, auto, source]
+      properties:
+        id: { type: string, format: uuid }
+        sprayed_at: { type: string, format: date-time }
+        location: { $ref: '#/components/schemas/GeoPoint' }
+        duration_ms: { type: integer }
+        flow_lpm: { type: number }
+        arc_deg: { type: integer, enum: [180, 360] }
+        nozzle_height_cm: { type: number }
+        litres: { type: number }
+        auto: { type: boolean }
+        detection_id: { type: [string, 'null'], format: uuid }
+        source: { $ref: '#/components/schemas/Source' }
+
+    ScoutRun:
+      type: object
+      required: [id, status, started_at, plants_scanned, plants_flagged, source]
+      properties:
+        id: { type: string, format: uuid }
+        status: { type: string, enum: [running, completed, aborted] }
+        started_at: { type: string, format: date-time }
+        ended_at: { type: [string, 'null'], format: date-time }
+        plants_scanned: { type: integer }
+        plants_flagged: { type: integer }
+        infection_rate: { type: number, description: plants_flagged / plants_scanned }
+        distance_m: { type: number }
+        source: { $ref: '#/components/schemas/Source' }
+
+    Issue:
+      type: object
+      required: [code, name, issue_type, what_it_is, what_to_do, action_within_days]
+      properties:
+        code: { type: string }
+        name: { type: string, description: Plain language. "Late blight", not the Latin. }
+        scientific_name: { type: [string, 'null'] }
+        issue_type: { type: string, enum: [fungus, insect, bacteria, virus, nutrient, abiotic] }
+        what_it_is: { type: string }
+        what_to_do: { type: string }
+        action_within_days: { type: integer }
+
+    Detection:
+      type: object
+      required: [id, detected_at, severity, confidence, camera, bbox, issue, source]
+      properties:
+        id: { type: string, format: uuid }
+        detected_at: { type: string, format: date-time }
+        severity: { $ref: '#/components/schemas/Severity' }
+        confidence: { type: number }
+        camera: { type: string, enum: [left, right] }
+        bbox:
+          type: object
+          description: Normalised to the frame, so it lands correctly at any resolution.
+          required: [x, y, w, h]
+          properties:
+            x: { type: number }
+            y: { type: number }
+            w: { type: number }
+            h: { type: number }
+        location: { oneOf: [{ $ref: '#/components/schemas/GeoPoint' }, { type: 'null' }] }
+        row: { type: [integer, 'null'] }
+        metres_from_edge: { type: [number, 'null'] }
+        image_url:
+          type: [string, 'null']
+          description: Null while the upload is pending. The UI shows its own empty state.
+        crop_url: { type: [string, 'null'] }
+        issue: { $ref: '#/components/schemas/Issue' }
+        inspection_status:
+          { oneOf: [{ $ref: '#/components/schemas/InspectionStatus' }, { type: 'null' }] }
+        source: { $ref: '#/components/schemas/Source' }
+
+    DetectionDetail:
+      allOf:
+        - $ref: '#/components/schemas/Detection'
+        - type: object
+          properties:
+            run_id: { type: [string, 'null'], format: uuid }
+            inspections:
+              type: array
+              items: { $ref: '#/components/schemas/Inspection' }
+
+    Inspection:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id: { type: string, format: uuid }
+        status: { $ref: '#/components/schemas/InspectionStatus' }
+        note: { type: [string, 'null'] }
+        user: { type: [string, 'null'] }
+        created_at: { type: string, format: date-time }
+
+    AnalyticsOverview:
+      type: object
+      required: [field, generated_at, metrics, severity_mix, issues, trend, alert]
+      properties:
+        field:
+          type: object
+          properties:
+            id: { type: string, format: uuid }
+            name: { type: string }
+            crop: { type: string }
+        generated_at: { type: string, format: date-time }
+        metrics:
+          type: object
+          required: [plants_scanned, plants_flagged, infection_rate, critical_count]
+          properties:
+            plants_scanned: { type: integer }
+            plants_flagged: { type: integer }
+            infection_rate: { type: number }
+            critical_count: { type: integer }
+            change_vs_previous_run: { type: [number, 'null'] }
+        severity_mix:
+          type: array
+          items:
+            type: object
+            required: [severity, count]
+            properties:
+              severity: { $ref: '#/components/schemas/Severity' }
+              count: { type: integer }
+        issues:
+          type: array
+          items:
+            type: object
+            required: [issue, count]
+            properties:
+              issue: { $ref: '#/components/schemas/Issue' }
+              count: { type: integer }
+              critical_count: { type: integer }
+        trend:
+          type: object
+          required: [points, action_threshold]
+          properties:
+            action_threshold:
+              type: number
+              description: Infection rate above which the UI advises acting.
+            points:
+              type: array
+              items:
+                type: object
+                required: [run_id, at, infection_rate, flagged]
+                properties:
+                  run_id: { type: string, format: uuid }
+                  at: { type: string, format: date-time }
+                  infection_rate: { type: number }
+                  flagged: { type: integer }
+        alert:
+          type: [object, 'null']
+          description: |
+            The single plain-language sentence at the top of the overview, assembled from
+            the same snapshot as the numbers below it. Null when nothing needs attention.
+          required: [sentence, tone]
+          properties:
+            sentence:
+              type: string
+              examples:
+                - Late blight is spreading in rows 6 to 9 after last week's rain. Check the 14 critical plants within 2 days.
+            tone: { type: string, enum: [info, warning, critical] }
+            issue_code: { type: [string, 'null'] }
+            from_row: { type: [integer, 'null'] }
+            to_row: { type: [integer, 'null'] }
+            critical_count: { type: integer }
+            within_days: { type: [integer, 'null'] }
+
+    Hotspot:
+      type: object
+      required: [id, severity, centre, detection_count, issue]
+      properties:
+        id: { type: string }
+        severity: { $ref: '#/components/schemas/Severity' }
+        centre: { $ref: '#/components/schemas/GeoPoint' }
+        rows: { type: array, items: { type: integer } }
+        detection_count: { type: integer }
+        issue: { $ref: '#/components/schemas/Issue' }
+        sample_detection_id: { type: [string, 'null'], format: uuid }

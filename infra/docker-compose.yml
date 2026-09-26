@@ -1,0 +1,199 @@
+# Local development stack. `make dev` from the repository root brings this up.
+# Every credential comes from ../.env (see .env.example). Nothing is hard-coded.
+
+name: agri
+
+x-restart: &restart
+  restart: unless-stopped
+
+services:
+  postgres:
+    <<: *restart
+    image: timescale/timescaledb-ha:pg16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-agri}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-agri}
+    ports:
+      - '${POSTGRES_PORT:-5432}:5432'
+    volumes:
+      - pgdata:/home/postgres/pgdata/data
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER:-agri} -d ${POSTGRES_DB:-agri}']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  redis:
+    <<: *restart
+    image: redis:7-alpine
+    command: ['redis-server', '--appendonly', 'yes', '--save', '60', '1']
+    ports:
+      - '${REDIS_PORT:-6379}:6379'
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # Object storage for detection and sample images, S3 API.
+  #
+  # The brief specifies MinIO. MinIO withdrew its community container images and
+  # binaries (Docker Hub and quay.io tags removed, dl.min.io returns 410), so this
+  # is SeaweedFS's S3 gateway instead — approved as the substitute. Nothing in the
+  # application changes: aioboto3 speaks plain S3 to either one.
+  s3:
+    <<: *restart
+    image: chrislusf/seaweedfs:3.80
+    command:
+      - server
+      # Without this SeaweedFS binds only to the container IP, so neither the
+      # healthcheck on localhost nor the published host port can reach it.
+      - -ip.bind=0.0.0.0
+      - -dir=/data
+      - -s3
+      - -s3.port=9000
+      - -s3.config=/etc/seaweedfs/s3.json
+      - -master.volumeSizeLimitMB=256
+    ports:
+      - '${S3_PORT:-9000}:9000'
+      - '${S3_ADMIN_PORT:-9333}:9333'
+    volumes:
+      - s3data:/data
+      - ./seaweedfs/s3.generated.json:/etc/seaweedfs/s3.json:ro
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://localhost:9333/cluster/healthz']
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
+
+  # Creates the image bucket once, then exits. Not a long-running service.
+  #
+  # The healthcheck on `s3` only proves the master is up; the filer that backs bucket
+  # creation comes up a moment later, so this retries and then VERIFIES the bucket is
+  # listed. It must not report success it has not confirmed.
+  s3-init:
+    image: chrislusf/seaweedfs:3.80
+    depends_on:
+      s3:
+        condition: service_healthy
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        bucket="${S3_BUCKET:-agri-images}"
+        for attempt in $$(seq 1 30); do
+          echo "s3.bucket.create -name $$bucket" | weed shell -master=s3:9333 >/dev/null 2>&1
+          if echo "s3.bucket.list" | weed shell -master=s3:9333 2>/dev/null | grep -q "$$bucket"; then
+            echo "bucket $$bucket confirmed after $$attempt attempt(s)"
+            exit 0
+          fi
+          sleep 2
+        done
+        echo "FAILED: bucket $$bucket was not created after 30 attempts" >&2
+        exit 1
+    restart: 'no'
+
+  mosquitto:
+    <<: *restart
+    image: eclipse-mosquitto:2
+    ports:
+      - '${MQTT_PORT:-1883}:1883'
+      - '${MQTT_TLS_PORT:-8883}:8883'
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./mosquitto/acl:/mosquitto/config/acl:ro
+      - ./mosquitto/passwd:/mosquitto/config/passwd:ro
+      - ./mosquitto/certs:/mosquitto/certs:ro
+      - mqttdata:/mosquitto/data
+    healthcheck:
+      # Authenticated round trip: proves the listener, the password file and the ACL all work.
+      test:
+        [
+          'CMD-SHELL',
+          'mosquitto_sub -h localhost -p 1883 -u api -P "$$MQTT_API_PASSWORD" -t agri/v1/healthcheck -C 1 -W 2 -E || exit 1',
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    environment:
+      MQTT_API_PASSWORD: ${MQTT_API_PASSWORD:?set MQTT_API_PASSWORD in .env}
+
+  api:
+    <<: *restart
+    build:
+      context: ..
+      dockerfile: infra/docker/api.Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      mosquitto:
+        condition: service_healthy
+    environment:
+      AGRI_ENV: local
+      AGRI_LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      AGRI_DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-agri}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-agri}
+      AGRI_REDIS_URL: redis://redis:6379/0
+      AGRI_MQTT_HOST: mosquitto
+      AGRI_MQTT_PORT: 1883
+      AGRI_MQTT_USERNAME: api
+      AGRI_MQTT_PASSWORD: ${MQTT_API_PASSWORD}
+      AGRI_S3_ENDPOINT: http://s3:9000
+      AGRI_S3_ACCESS_KEY: ${S3_ACCESS_KEY}
+      AGRI_S3_SECRET_KEY: ${S3_SECRET_KEY}
+      AGRI_S3_BUCKET: ${S3_BUCKET:-agri-images}
+      AGRI_JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET in .env}
+      AGRI_CORS_ORIGINS: '["http://localhost:3000"]'
+    ports:
+      - '${API_PORT:-8000}:8000'
+
+  sim-robot:
+    <<: *restart
+    build:
+      context: ..
+      dockerfile: infra/docker/sim-robot.Dockerfile
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+    environment:
+      SIM_ROBOT_ID: scout-01
+      SIM_LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      # The sim connects over TLS on 8883, exactly as a real robot in the field does.
+      SIM_MQTT_HOST: mosquitto
+      SIM_MQTT_PORT: 8883
+      SIM_MQTT_TLS: 'true'
+      SIM_MQTT_CA_CERT: /certs/ca.crt
+      SIM_MQTT_USERNAME: scout-01
+      SIM_MQTT_PASSWORD: ${MQTT_ROBOT_PASSWORD:?set MQTT_ROBOT_PASSWORD in .env}
+    volumes:
+      - ./mosquitto/certs/ca.crt:/certs/ca.crt:ro
+
+  web:
+    <<: *restart
+    build:
+      context: ..
+      dockerfile: infra/docker/web.Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:${API_PORT:-8000}
+        NEXT_PUBLIC_WS_URL: ws://localhost:${API_PORT:-8000}
+    depends_on:
+      - api
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:${API_PORT:-8000}
+      NEXT_PUBLIC_WS_URL: ws://localhost:${API_PORT:-8000}
+    ports:
+      - '${WEB_PORT:-3000}:3000'
+
+volumes:
+  pgdata:
+  redisdata:
+  s3data:
+  mqttdata:

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/detections.json",
+  "title": "DetectionBatch",
+  "description": "QoS 1 on agri/v1/{robot_id}/detections, one message per analysed frame. Never dropped under backpressure and deduplicated on (robot_id, seq), because a lost detection is a plant nobody inspects. Boxes are normalised to the frame so they land correctly on either video path.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["camera", "frame_ts", "detections", "plants_scanned"],
+  "properties": {
+    "camera": {
+      "$ref": "../common/envelope.json#/$defs/CameraSide"
+    },
+    "frame_ts": {
+      "$ref": "../common/envelope.json#/$defs/TimestampNs"
+    },
+    "frame_id": {
+      "type": "string",
+      "maxLength": 64,
+      "description": "Ties this batch to a video frame so the UI can align boxes, or dim them when no matching frame arrived."
+    },
+    "run_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "Scouting run this frame belongs to; null when driving manually outside a run."
+    },
+    "image_key": {
+      "type": ["string", "null"],
+      "description": "Object-store key of the full annotated frame. Null until the upload completes; the detection row is written either way."
+    },
+    "plants_scanned": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Plants seen in this frame, flagged or not. Summed to give the infection rate."
+    },
+    "detections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Detection",
+        "required": ["detection_id", "issue_code", "severity", "confidence", "bbox"],
+        "properties": {
+          "detection_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Generated on the robot so a redelivered QoS 1 message cannot create a duplicate row."
+          },
+          "issue_code": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]{2,48}$",
+            "examples": ["late_blight", "aphid_colony"],
+            "description": "Key into issue_catalog, which holds the plain-language name, the type, what it is and what to do."
+          },
+          "severity": {
+            "$ref": "../common/envelope.json#/$defs/Severity"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "bbox": {
+            "$ref": "../common/envelope.json#/$defs/BoundingBox"
+          },
+          "position": {
+            "$ref": "../common/envelope.json#/$defs/LatLon"
+          },
+          "row": {
+            "type": ["integer", "null"],
+            "minimum": 0
+          },
+          "metres_from_edge": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "description": "Distance along the row from the field edge. This is how a farmer actually walks to the plant."
+          },
+          "crop_key": {
+            "type": ["string", "null"],
+            "description": "Object-store key of the cropped sample image shown in the Analytics hotspot detail."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "unevaluatedProperties": false
+}

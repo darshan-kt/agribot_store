@@ -1,0 +1,75 @@
+{
+  "apps": [
+    {
+      "id": "6b68437e-2742-4716-9d51-e754851e4be0",
+      "slug": "crop-scout",
+      "name": "Crop Watch",
+      "tagline": "Drive the robot and spot problems as it goes",
+      "description": "Watch both cameras while the robot moves down the rows. Problems are outlined as they are found, and every one is pinned on the field map with its location.",
+      "category": "field_ops",
+      "icon": "scout",
+      "featured": true,
+      "flow_position": 2,
+      "route": "/apps/crop-scout",
+      "badge": null
+    },
+    {
+      "id": "52b338e8-dde3-4a4a-84ca-acb1f7c75dd8",
+      "slug": "mission-planner",
+      "name": "Mission Planner",
+      "tagline": "Plan a route, or drive it yourself",
+      "description": "Set the robot to cover the rows on its own, or take the controls. Includes the sprayer: arm it, set the nozzle and flow, and treat flagged plants as you go.",
+      "category": "field_ops",
+      "icon": "route",
+      "featured": false,
+      "flow_position": 1,
+      "route": "/apps/mission-planner",
+      "badge": null
+    },
+    {
+      "id": "a7531422-0780-460a-abfd-2a644ff291f8",
+      "slug": "crop-health",
+      "name": "Crop Health",
+      "tagline": "What was found, where, and what to do",
+      "description": "Every flagged plant from every scouting run, grouped into hotspots with a photo, its GPS location and the row to walk to. Tells you what it is and what to do.",
+      "category": "insights",
+      "icon": "leaf",
+      "featured": false,
+      "flow_position": 3,
+      "route": "/apps/crop-health",
+      "badge": {
+        "label": "14 critical",
+        "tone": "critical"
+      }
+    },
+    {
+      "id": "9f0aa9ea-08e6-4f91-b536-e2844b919933",
+      "slug": "dashboard",
+      "name": "Dashboard",
+      "tagline": "How the robot itself is doing",
+      "description": "Battery, signal, sensors and onboard computer at a glance, plus the settings that change how the robot drives and how sensitive its detection is.",
+      "category": "robot",
+      "icon": "gauge",
+      "featured": false,
+      "flow_position": null,
+      "route": "/apps/dashboard",
+      "badge": {
+        "label": "1 check",
+        "tone": "warning"
+      }
+    },
+    {
+      "id": "c1d4f0a7-5b83-4f2e-9a16-7c3e8d5b2094",
+      "slug": "crop-chat",
+      "name": "Crop Chat",
+      "tagline": "Ask about this field in your language",
+      "description": "Ask what is wrong in the field, where the worst plants are and what to do about them, in English, Hindi or twenty-one other Indian languages. Answers are read from this robot's own scouting data.",
+      "category": "insights",
+      "icon": "chat",
+      "featured": false,
+      "flow_position": null,
+      "route": "/apps/crop-chat",
+      "badge": null
+    }
+  ]
+}

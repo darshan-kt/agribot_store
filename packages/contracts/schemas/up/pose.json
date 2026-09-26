@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/pose.json",
+  "title": "Pose",
+  "description": "10 Hz on agri/v1/{robot_id}/pose at QoS 0. The browser interpolates between ticks so the robot glides rather than teleporting, and shows the true telemetry age numerically so interpolation never hides a stall.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["position", "heading_deg", "fix_type"],
+  "properties": {
+    "position": {
+      "$ref": "../common/envelope.json#/$defs/LatLon"
+    },
+    "altitude_m": {
+      "type": "number"
+    },
+    "map_position": {
+      "type": "object",
+      "title": "MapPosition",
+      "description": "Metres in the field's local map frame, produced by navsat_transform. Cheaper than lat/lon for drawing and immune to projection drift near the field.",
+      "required": ["x", "y"],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "heading_deg": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMaximum": 360,
+      "description": "Compass heading, 0 = north, clockwise."
+    },
+    "speed_mps": {
+      "type": "number"
+    },
+    "yaw_rate_dps": {
+      "type": "number"
+    },
+    "fix_type": {
+      "type": "string",
+      "enum": ["none", "2d", "3d", "dgps", "rtk_float", "rtk_fixed"]
+    },
+    "accuracy_m": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "unevaluatedProperties": false
+}

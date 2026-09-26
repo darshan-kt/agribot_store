@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/telemetry.json",
+  "title": "Telemetry",
+  "description": "1-10 Hz on agri/v1/{robot_id}/telemetry at QoS 0. Drives the Dashboard status cards and onboard-computer bars. Lossy by design: a dropped telemetry frame is replaced by the next one, so it is the first thing shed under backpressure.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["battery", "uptime_s", "compute"],
+  "properties": {
+    "battery": {
+      "type": "object",
+      "title": "BatteryTelemetry",
+      "required": ["percent"],
+      "properties": {
+        "percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "time_remaining_s": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Null while the estimate is not yet stable."
+        },
+        "voltage_v": {
+          "type": "number",
+          "minimum": 0
+        },
+        "current_a": {
+          "type": "number"
+        },
+        "charging": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "signal_dbm": {
+      "type": "number",
+      "maximum": 0,
+      "description": "Negative; closer to zero is stronger."
+    },
+    "uptime_s": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "speed_mps": {
+      "type": "number",
+      "minimum": 0
+    },
+    "distance_travelled_m": {
+      "type": "number",
+      "minimum": 0
+    },
+    "field_id": {
+      "type": ["string", "null"],
+      "description": "Field the robot believes it is in, or null when outside every known field."
+    },
+    "row": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "compute": {
+      "type": "object",
+      "title": "ComputeTelemetry",
+      "required": ["cpu_percent", "memory_percent"],
+      "properties": {
+        "cpu_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "gpu_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "memory_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cpu_temp_c": {
+          "type": "number"
+        },
+        "gpu_temp_c": {
+          "type": "number"
+        },
+        "detection_fps": {
+          "type": "number",
+          "minimum": 0
+        },
+        "storage_used_gb": {
+          "type": "number",
+          "minimum": 0
+        },
+        "storage_total_gb": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

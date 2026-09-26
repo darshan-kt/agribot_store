@@ -1,0 +1,22 @@
+# Per-robot topic isolation. A robot may only speak on its own subtree, and may
+# only subscribe to commands addressed to it. The backend is the only client
+# allowed across the whole namespace.
+#
+# %c expands to the client id, %u to the username. Robots must connect with
+# client id == username == robot_id.
+
+user api
+topic readwrite agri/v1/#
+
+user scout-01
+topic write agri/v1/scout-01/state
+topic write agri/v1/scout-01/telemetry
+topic write agri/v1/scout-01/sensors
+topic write agri/v1/scout-01/pose
+topic write agri/v1/scout-01/detections
+topic write agri/v1/scout-01/sprayer/state
+topic write agri/v1/scout-01/mission/progress
+topic write agri/v1/scout-01/config/ack
+topic write agri/v1/scout-01/events
+topic read agri/v1/scout-01/cmd/#
+topic read agri/v1/scout-01/config/set

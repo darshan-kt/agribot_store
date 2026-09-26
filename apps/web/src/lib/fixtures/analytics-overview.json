@@ -1,0 +1,165 @@
+{
+  "field": {
+    "id": "ced650ca-a1d7-49d1-99d6-0eb5861ca013",
+    "name": "B-4",
+    "crop": "Tomato"
+  },
+  "generated_at": "2026-09-25T11:46:45.919287Z",
+  "metrics": {
+    "plants_scanned": 1800,
+    "plants_flagged": 37,
+    "infection_rate": 0.02056,
+    "critical_count": 14,
+    "change_vs_previous_run": 0.005
+  },
+  "severity_mix": [
+    {
+      "severity": "low",
+      "count": 8
+    },
+    {
+      "severity": "moderate",
+      "count": 15
+    },
+    {
+      "severity": "critical",
+      "count": 14
+    }
+  ],
+  "issues": [
+    {
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "count": 26,
+      "critical_count": 14
+    },
+    {
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "count": 5,
+      "critical_count": 0
+    },
+    {
+      "issue": {
+        "code": "spider_mites",
+        "name": "Spider mites",
+        "scientific_name": "Tetranychus urticae",
+        "issue_type": "insect",
+        "what_it_is": "Tiny mites that cause fine pale speckling on leaves, with faint webbing underneath. They multiply fast in hot, dry conditions.",
+        "what_to_do": "Raise the humidity around the plants and rinse the undersides of the leaves. Treat with a miticide if the speckling spreads, and check plants either side.",
+        "action_within_days": 4
+      },
+      "count": 2,
+      "critical_count": 0
+    },
+    {
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "count": 2,
+      "critical_count": 0
+    },
+    {
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "count": 1,
+      "critical_count": 0
+    },
+    {
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "count": 1,
+      "critical_count": 0
+    }
+  ],
+  "trend": {
+    "action_threshold": 0.04,
+    "points": [
+      {
+        "run_id": "0af6020a-8c04-47a3-b7c6-fc50230ad71d",
+        "at": "2026-09-19T07:10:00Z",
+        "infection_rate": 0.00611,
+        "flagged": 11
+      },
+      {
+        "run_id": "1ea8624d-2d74-41ad-aea6-80a936d443b7",
+        "at": "2026-09-20T07:10:00Z",
+        "infection_rate": 0.00833,
+        "flagged": 15
+      },
+      {
+        "run_id": "b5e3b77b-3b47-4a26-b21d-0efde8dbb2cf",
+        "at": "2026-09-21T07:10:00Z",
+        "infection_rate": 0.01056,
+        "flagged": 19
+      },
+      {
+        "run_id": "e8b777ff-8418-4610-aafa-fa5d81c2c6ca",
+        "at": "2026-09-22T07:10:00Z",
+        "infection_rate": 0.01167,
+        "flagged": 21
+      },
+      {
+        "run_id": "b99a87f6-cfb3-4b54-9bb9-7f73f8cbd0c4",
+        "at": "2026-09-23T07:10:00Z",
+        "infection_rate": 0.01667,
+        "flagged": 30
+      },
+      {
+        "run_id": "3477dc3d-836b-436b-86cf-e359e9b59fc8",
+        "at": "2026-09-24T07:10:00Z",
+        "infection_rate": 0.01556,
+        "flagged": 28
+      },
+      {
+        "run_id": "4aa7406c-c0dd-4d53-88c9-1fca970e886b",
+        "at": "2026-09-25T07:10:00Z",
+        "infection_rate": 0.02056,
+        "flagged": 37
+      }
+    ]
+  },
+  "alert": {
+    "sentence": "Late blight is spreading in rows 6 to 9 after 88% humidity in the field. Check the 14 critical plants within 2 days.",
+    "tone": "critical",
+    "issue_code": "late_blight",
+    "from_row": 6,
+    "to_row": 9,
+    "critical_count": 14,
+    "within_days": 2
+  }
+}

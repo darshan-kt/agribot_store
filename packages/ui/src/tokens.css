@@ -1,0 +1,369 @@
+/**
+ * Design tokens.
+ *
+ * Every component consumes these. No component declares a colour, a radius or a
+ * duration of its own — if a value is needed twice, it belongs here.
+ *
+ * The palette, the severity scale and the three typefaces are fixed by the product
+ * brief. Everything else (muted inks, lines, soft fills, the dark theme) is derived
+ * from them.
+ *
+ * Two constraints shaped the derivations:
+ *
+ * 1. This is read outdoors, in direct sun, on a phone held at arm's length. There is
+ *    no low-contrast secondary text anywhere in the system: the faintest ink still
+ *    clears 4.5:1 on every surface it is allowed to sit on.
+ * 2. Severity must survive being photocopied, screenshotted in greyscale, or seen by
+ *    someone with deuteranopia. The three severity colours therefore differ in
+ *    lightness as much as in hue (L* ≈ 84, 65, 42), and the UI always prints the word
+ *    next to the colour.
+ */
+
+@theme {
+  /* ---------------------------------------------------------------- surfaces -- */
+  /* The ground is a desaturated sage rather than a neutral grey: the accent is green,
+     and a grey with no relationship to it reads as unconsidered. */
+  --color-bg: #e4eadf;
+  --color-surface: #f7f9f4;
+  --color-surface-sunk: #d9e1d3;
+  --color-surface-raised: #ffffff;
+
+  /* ---------------------------------------------------------------- ink -- */
+  --color-ink: #1c2a21;
+  --color-ink-muted: #47584c;
+  /* Measured, not judged: 5.1:1 on the page ground and 4.7:1 in a well. The previous
+     value was 4.32:1 on the ground, which quietly broke this file's own promise. */
+  --color-ink-subtle: #526558;
+  --color-ink-inverse: #f7f9f4;
+
+  /* ---------------------------------------------------------------- lines -- */
+  --color-line: #c5d1bd;
+  --color-line-strong: #a3b399;
+  --color-focus: #1f6b4a;
+
+  /* ---------------------------------------------------------------- brand -- */
+  --color-primary: #1f6b4a;
+  --color-primary-hover: #17543a;
+  --color-primary-soft: #d5e3da;
+  --color-on-primary: #f7f9f4;
+
+  --color-info: #3e7cb1;
+  --color-info-hover: #33648e;
+  --color-info-soft: #d8e5f0;
+  --color-on-info: #ffffff;
+
+  /* ------------------------------------------------------------- severity -- */
+  /* Semantic, and deliberately not the accent hue: a green "all clear" and a green
+     brand would be indistinguishable at a glance. */
+  --color-low: #f0cf6b;
+  --color-low-soft: #f9edc9;
+  --color-on-low: #3d3208;
+
+  --color-moderate: #e8873a;
+  --color-moderate-soft: #fadfc8;
+  --color-on-moderate: #3d1f06;
+  /* The amber as *text*. The mark itself is the brief's #e8873a, which measures 2.5:1 on
+     a card — fine for a dot beside a word, unreadable as the word. Anything that writes
+     "Check" or "Pending" in amber uses this instead. */
+  --color-moderate-ink: #9c5412;
+
+  --color-critical: #b8321f;
+  --color-critical-soft: #f5d6d1;
+  --color-on-critical: #ffffff;
+  /* Red as *text* — a refusal, a warning sentence. In light the mark colour is already
+     legible and this is the same value; in dark the mark had to go deeper to stay apart
+     from the amber, so the text steps back up. Marks and words have different jobs and
+     therefore different floors: 3:1 and 4.5:1. */
+  --color-critical-ink: #b8321f;
+
+  /* ---------------------------------------------------------------- status -- */
+  --color-online: #1f6b4a;
+  --color-offline: #526558;
+  /* Darker than the moderate amber it used to borrow: this one is printed as *text*
+     ("last seen 12 s ago") as well as drawn as a dot, and 2.5:1 text is not readable. */
+  --color-stale: #9c5412;
+  --color-danger: #b8321f;
+  --color-danger-hover: #8f2617;
+
+  /* ---------------------------------------------------------------- ground -- */
+  /* The drone-view field. These are imagery, not interface: they stand for soil and
+     canopy seen from above, so they are sampled from what an aerial photograph of a
+     tomato block actually looks like rather than derived from the brand green. They
+     never carry text — only the map draws with them — so they are exempt from the
+     4.5:1 floor the ink tokens are held to, and the map's own labels keep using ink. */
+  --color-soil: #7d6a52;
+  --color-soil-dark: #6a5946;
+  --color-canopy: #5f8f3a;
+  --color-canopy-light: #86bb55;
+  --color-canopy-dark: #3f6b28;
+
+  /* ---------------------------------------------------------------- type -- */
+  /* next/font supplies each --font-* variable already expanded to the family plus a
+     metric-matched local fallback, so only the generic families are appended here. */
+  --font-display:
+    var(--font-bricolage, 'Bricolage Grotesque'), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-instrument, 'Instrument Sans'), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains, 'JetBrains Mono'), ui-monospace, 'SF Mono', monospace;
+
+  /* A dense operational scale: base is 15px, not 16, because these screens carry a lot
+     of labelled values and the extra pixel buys nothing at this density. */
+  --text-2xs: 0.6875rem; /* 11px — unit suffixes, axis ticks */
+  --text-xs: 0.75rem; /* 12px — eyebrow labels */
+  --text-sm: 0.8125rem; /* 13px — secondary text, table cells */
+  --text-base: 0.9375rem; /* 15px — body */
+  --text-lg: 1.0625rem; /* 17px — card titles */
+  --text-xl: 1.3125rem; /* 21px — section headings */
+  --text-2xl: 1.75rem; /* 28px — page titles */
+  --text-3xl: 2.25rem; /* 36px — hero */
+  --text-4xl: 3rem; /* 48px — the single largest number on a screen */
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+
+  /* ---------------------------------------------------------------- radius -- */
+  /* Small and consistent. This is equipment software; heavily rounded corners read as
+     consumer-app decoration and blur the boundary between adjacent dense panels. */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-full: 999px;
+
+  /* ------------------------------------------------------------- elevation -- */
+  /* Tinted toward the ground rather than pure black, so a raised surface looks lit
+     rather than dirty. Used sparingly — most separation here is a line, not a shadow. */
+  --shadow-sm: 0 1px 2px rgb(28 42 33 / 0.06);
+  --shadow-md: 0 2px 8px rgb(28 42 33 / 0.08);
+  --shadow-lg: 0 8px 28px rgb(28 42 33 / 0.14);
+
+  /* ---------------------------------------------------------------- motion -- */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-instant: 80ms;
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --duration-slow: 360ms;
+
+  /* ---------------------------------------------------------------- sizing -- */
+  /* Minimum interactive size. Gloves, sunlight, a moving vehicle. */
+  --size-touch: 44px;
+}
+
+/*
+ * Dark theme.
+ *
+ * The viewer has three states, not two: an explicit choice stamps data-theme on the root
+ * element, and the default "system" setting stamps nothing at all — there, only
+ * prefers-color-scheme separates light from dark. So the dark values are applied twice:
+ * once behind the media query (guarded, so an explicit light choice beats a dark OS) and
+ * once behind the explicit dark stamp (so the toggle wins in the other direction too).
+ *
+ * The two application points are unavoidable. Duplicating the *values* across them is
+ * not, and doing so is how a dark palette silently drifts out of sync with itself — so
+ * each colour is defined exactly once below and both blocks just reference it.
+ *
+ * This is not an inversion of the light theme. The ground is a dark desaturated green
+ * rather than black, and the severity scale is re-derived against the dark surface — not
+ * lifted wholesale, which is what previously collapsed low and moderate together. The
+ * pairings below are held to 4.5:1 by a test that parses this file.
+ */
+:root {
+  --dark-bg: #121a14;
+  --dark-surface: #1a241d;
+  --dark-surface-sunk: #0e1510;
+  --dark-surface-raised: #223028;
+  --dark-ink: #e2e9dd;
+  --dark-ink-muted: #a9b8ae;
+  --dark-ink-subtle: #8a9a8f;
+  --dark-ink-inverse: #121a14;
+  --dark-line: #2f3f35;
+  --dark-line-strong: #465a4d;
+  --dark-focus: #6bbf95;
+  --dark-primary: #4a9e75;
+  --dark-primary-hover: #5fb389;
+  --dark-primary-soft: #1d3327;
+  --dark-on-primary: #08150e;
+  --dark-info: #6ba4d4;
+  --dark-info-hover: #82b6e0;
+  --dark-info-soft: #1c2c3a;
+  --dark-on-info: #08151f;
+  /* The dark severity steps are re-derived, not lifted copies of the light ones.
+     Measured with the palette validator against the dark surface: the previous set put
+     low and moderate 12.0 apart in normal vision (the floor is 15) because lifting all
+     three compressed the lightness range the scale depends on. Spreading them back out
+     gives 17.1 normal / 15.2 deutan on the worst adjacent pair, with every step still
+     clearing 3:1 on the dark surface. */
+  --dark-low: #edd37e;
+  --dark-low-soft: #362f14;
+  --dark-on-low: #1a1604;
+  --dark-moderate: #e8873a;
+  --dark-moderate-soft: #3a2413;
+  --dark-on-moderate: #1f0f03;
+  --dark-moderate-ink: #f09a54;
+  --dark-critical: #c93d30;
+  --dark-critical-soft: #3d1a14;
+  --dark-on-critical: #ffffff;
+  --dark-critical-ink: #ea6a55;
+  --dark-online: #4a9e75;
+  --dark-offline: #8a9a8f;
+  --dark-stale: #f09a54;
+  /* White sits on this as a button label, so it is deeper than the old #e35a44, which
+     held white at only 3.6:1. Hover goes darker rather than lighter — the usual dark-mode
+     direction would have cost the label its contrast. */
+  --dark-danger: #c93d30;
+  --dark-danger-hover: #be3a2d;
+
+  /* Dimmer than the daylight set: a bright aerial photograph on a dark panel glares in
+     exactly the conditions dark mode exists for. Same hues, lower luminance. */
+  --dark-soil: #4a3f33;
+  --dark-soil-dark: #3b322a;
+  --dark-canopy: #43662a;
+  --dark-canopy-light: #5c8a3b;
+  --dark-canopy-dark: #2c471c;
+
+  --dark-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --dark-shadow-md: 0 2px 8px rgb(0 0 0 / 0.45);
+  --dark-shadow-lg: 0 8px 28px rgb(0 0 0 / 0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg: var(--dark-bg);
+    --color-surface: var(--dark-surface);
+    --color-surface-sunk: var(--dark-surface-sunk);
+    --color-surface-raised: var(--dark-surface-raised);
+    --color-ink: var(--dark-ink);
+    --color-ink-muted: var(--dark-ink-muted);
+    --color-ink-subtle: var(--dark-ink-subtle);
+    --color-ink-inverse: var(--dark-ink-inverse);
+    --color-line: var(--dark-line);
+    --color-line-strong: var(--dark-line-strong);
+    --color-focus: var(--dark-focus);
+    --color-primary: var(--dark-primary);
+    --color-primary-hover: var(--dark-primary-hover);
+    --color-primary-soft: var(--dark-primary-soft);
+    --color-on-primary: var(--dark-on-primary);
+    --color-info: var(--dark-info);
+    --color-info-hover: var(--dark-info-hover);
+    --color-info-soft: var(--dark-info-soft);
+    --color-on-info: var(--dark-on-info);
+    --color-low: var(--dark-low);
+    --color-low-soft: var(--dark-low-soft);
+    --color-on-low: var(--dark-on-low);
+    --color-moderate: var(--dark-moderate);
+    --color-moderate-soft: var(--dark-moderate-soft);
+    --color-on-moderate: var(--dark-on-moderate);
+    --color-moderate-ink: var(--dark-moderate-ink);
+    --color-critical: var(--dark-critical);
+    --color-critical-soft: var(--dark-critical-soft);
+    --color-on-critical: var(--dark-on-critical);
+    --color-critical-ink: var(--dark-critical-ink);
+    --color-online: var(--dark-online);
+    --color-offline: var(--dark-offline);
+    --color-stale: var(--dark-stale);
+    --color-danger: var(--dark-danger);
+    --color-danger-hover: var(--dark-danger-hover);
+    --color-soil: var(--dark-soil);
+    --color-soil-dark: var(--dark-soil-dark);
+    --color-canopy: var(--dark-canopy);
+    --color-canopy-light: var(--dark-canopy-light);
+    --color-canopy-dark: var(--dark-canopy-dark);
+    --shadow-sm: var(--dark-shadow-sm);
+    --shadow-md: var(--dark-shadow-md);
+    --shadow-lg: var(--dark-shadow-lg);
+  }
+}
+
+:root[data-theme='dark'] {
+  --color-bg: var(--dark-bg);
+  --color-surface: var(--dark-surface);
+  --color-surface-sunk: var(--dark-surface-sunk);
+  --color-surface-raised: var(--dark-surface-raised);
+  --color-ink: var(--dark-ink);
+  --color-ink-muted: var(--dark-ink-muted);
+  --color-ink-subtle: var(--dark-ink-subtle);
+  --color-ink-inverse: var(--dark-ink-inverse);
+  --color-line: var(--dark-line);
+  --color-line-strong: var(--dark-line-strong);
+  --color-focus: var(--dark-focus);
+  --color-primary: var(--dark-primary);
+  --color-primary-hover: var(--dark-primary-hover);
+  --color-primary-soft: var(--dark-primary-soft);
+  --color-on-primary: var(--dark-on-primary);
+  --color-info: var(--dark-info);
+  --color-info-hover: var(--dark-info-hover);
+  --color-info-soft: var(--dark-info-soft);
+  --color-on-info: var(--dark-on-info);
+  --color-low: var(--dark-low);
+  --color-low-soft: var(--dark-low-soft);
+  --color-on-low: var(--dark-on-low);
+  --color-moderate: var(--dark-moderate);
+  --color-moderate-soft: var(--dark-moderate-soft);
+  --color-on-moderate: var(--dark-on-moderate);
+  --color-moderate-ink: var(--dark-moderate-ink);
+  --color-critical: var(--dark-critical);
+  --color-critical-soft: var(--dark-critical-soft);
+  --color-on-critical: var(--dark-on-critical);
+  --color-critical-ink: var(--dark-critical-ink);
+  --color-online: var(--dark-online);
+  --color-offline: var(--dark-offline);
+  --color-stale: var(--dark-stale);
+  --color-danger: var(--dark-danger);
+  --color-danger-hover: var(--dark-danger-hover);
+  --color-soil: var(--dark-soil);
+  --color-soil-dark: var(--dark-soil-dark);
+  --color-canopy: var(--dark-canopy);
+  --color-canopy-light: var(--dark-canopy-light);
+  --color-canopy-dark: var(--dark-canopy-dark);
+  --shadow-sm: var(--dark-shadow-sm);
+  --shadow-md: var(--dark-shadow-md);
+  --shadow-lg: var(--dark-shadow-lg);
+}
+
+/*
+ * Motion.
+ *
+ * Every animation here is tied to a meaning: the ping says "this connection is live",
+ * the pulse says "this is a placeholder, not a value". Both stop entirely under
+ * prefers-reduced-motion — components apply them with Tailwind's `motion-safe:` prefix,
+ * and the global reduced-motion rule in the app's stylesheet is the backstop.
+ */
+@theme {
+  --animate-ping-slow: ping-slow 2.4s var(--ease-out) infinite;
+  --animate-pulse-soft: pulse-soft 1.8s var(--ease-in-out) infinite;
+  --animate-rise: rise var(--duration-slow) var(--ease-out) both;
+
+  @keyframes ping-slow {
+    0% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    70%,
+    100% {
+      transform: scale(2.1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.55;
+    }
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/state.json",
+  "title": "RobotState",
+  "description": "Retained on agri/v1/{robot_id}/state. The broker republishes it to every new subscriber, so a browser opening the store sees the robot's liveness immediately. The Last Will and Testament is a copy of this payload with online=false and reason='lwt', which the broker publishes if the robot's connection drops without a clean disconnect.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["online", "mode", "estop_engaged"],
+  "properties": {
+    "online": {
+      "type": "boolean",
+      "description": "False in the LWT and in a clean shutdown notice."
+    },
+    "reason": {
+      "type": "string",
+      "enum": ["connected", "shutdown", "lwt", "reconnected"]
+    },
+    "mode": {
+      "$ref": "../common/envelope.json#/$defs/RobotMode"
+    },
+    "estop_engaged": {
+      "type": "boolean",
+      "description": "Latched on the robot. Clears only on an explicit operator reset."
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 64,
+      "examples": ["Scout-01"]
+    },
+    "model": {
+      "type": "string",
+      "maxLength": 64,
+      "examples": ["AgriScout R2"]
+    },
+    "firmware": {
+      "type": "string",
+      "maxLength": 32,
+      "examples": ["2.4.1"]
+    },
+    "boot_ts": {
+      "$ref": "../common/envelope.json#/$defs/TimestampNs"
+    },
+    "config_version": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Version of the configuration the robot is currently running."
+    }
+  },
+  "unevaluatedProperties": false
+}

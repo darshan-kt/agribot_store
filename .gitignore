@@ -1,0 +1,49 @@
+# dependencies
+node_modules/
+.pnpm-store/
+.venv/
+__pycache__/
+*.egg-info/
+.uv-cache/
+
+# builds
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+robot/ros2_ws/install/
+robot/ros2_ws/build/
+robot/ros2_ws/log/
+
+# test + cache
+.turbo/
+coverage/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+playwright-report/
+test-results/
+
+# local env + secrets (never commit)
+.env
+.env.*
+!.env.example
+infra/mosquitto/certs/
+infra/mosquitto/passwd
+*.pem
+*.key
+*.crt
+
+# local data volumes
+infra/.data/
+
+# os / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# rendered from seaweedfs/s3.json with real credentials
+infra/seaweedfs/s3.generated.json

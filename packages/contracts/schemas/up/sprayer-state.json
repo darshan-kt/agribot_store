@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/sprayer-state.json",
+  "title": "SprayerState",
+  "description": "2 Hz and on every change, on agri/v1/{robot_id}/sprayer/state. `interlocks` is the robot's own view of each precondition. The backend re-checks the same conditions before publishing a spray command, but the robot's copy is authoritative: it is the one attached to the valve.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": [
+    "armed",
+    "spraying",
+    "nozzle_height_cm",
+    "arc_deg",
+    "flow_lpm",
+    "tank_litres",
+    "tank_capacity_litres",
+    "interlocks"
+  ],
+  "properties": {
+    "armed": {
+      "type": "boolean",
+      "description": "Arming requires an explicit operator confirm and auto-clears on disconnect or lease expiry."
+    },
+    "spraying": {
+      "type": "boolean"
+    },
+    "nozzle_height_cm": {
+      "type": "number",
+      "minimum": 20,
+      "maximum": 90
+    },
+    "arc_deg": {
+      "$ref": "../common/envelope.json#/$defs/SprayArc"
+    },
+    "flow_lpm": {
+      "type": "number",
+      "minimum": 0
+    },
+    "tank_litres": {
+      "type": "number",
+      "minimum": 0
+    },
+    "tank_capacity_litres": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "litres_sprayed_total": {
+      "type": "number",
+      "minimum": 0
+    },
+    "interlocks": {
+      "type": "object",
+      "title": "SprayerInterlocks",
+      "description": "Every one of these must be true for the valve to open. Reported individually so the UI can say exactly which one is blocking, rather than a bare refusal.",
+      "required": ["armed", "inside_geofence", "speed_ok", "tank_ok", "estop_clear"],
+      "properties": {
+        "armed": {
+          "type": "boolean"
+        },
+        "inside_geofence": {
+          "type": "boolean",
+          "description": "Robot is inside the field polygon. Checked on the robot and again in PostGIS on the backend."
+        },
+        "speed_ok": {
+          "type": "boolean",
+          "description": "Ground speed below the spray limit; spraying while too fast under-doses and drifts."
+        },
+        "tank_ok": {
+          "type": "boolean"
+        },
+        "estop_clear": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "blocked_reason": {
+      "type": ["string", "null"],
+      "enum": [
+        "not_armed",
+        "outside_geofence",
+        "too_fast",
+        "tank_empty",
+        "estop_engaged",
+        "hardware_fault",
+        null
+      ],
+      "description": "The single interlock the robot reports as the current blocker, so the UI does not have to guess a precedence order."
+    }
+  },
+  "unevaluatedProperties": false
+}

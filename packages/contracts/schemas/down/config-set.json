@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/down/config-set.json",
+  "title": "ConfigSet",
+  "description": "QoS 1 on agri/v1/{robot_id}/config/set. Versioned: the robot echoes the version back on config/ack, and the UI shows the change as pending until it does. Versions are assigned by the backend and stored in robot_config_versions, so the full history of who changed what is recoverable.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["config_version", "issued_by"],
+  "properties": {
+    "config_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "max_speed_mps": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 5
+    },
+    "detection_sensitivity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Higher flags more plants and produces more false positives. The UI states that in plain language rather than showing a bare number."
+    },
+    "return_to_base_battery_percent": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 95
+    },
+    "camera_fps": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 60
+    },
+    "obstacle_stop_enabled": {
+      "type": "boolean"
+    },
+    "issued_by": {
+      "type": "string",
+      "format": "uuid",
+      "description": "User id of the operator. Written to audit_log with the command; every command is attributable to a person."
+    },
+    "lease_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "Control lease held by that operator. The backend rejects a command whose lease has expired or is held by someone else."
+    }
+  },
+  "unevaluatedProperties": false
+}

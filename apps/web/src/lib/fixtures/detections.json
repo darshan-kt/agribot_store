@@ -1,0 +1,5157 @@
+{
+  "detections": [
+    {
+      "id": "ea95d2b9-f8fe-40fb-afef-937e9f885cb0",
+      "detected_at": "2026-09-25T07:52:07Z",
+      "severity": "moderate",
+      "confidence": 0.889,
+      "camera": "right",
+      "bbox": {
+        "x": 0.12641,
+        "y": 0.29628,
+        "w": 0.19757,
+        "h": 0.10969
+      },
+      "location": {
+        "lat": 51.9848799,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 97.95,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "4eb42d59-1f07-47f7-aa56-fc2f06637554",
+      "detected_at": "2026-09-25T07:48:49Z",
+      "severity": "critical",
+      "confidence": 0.742,
+      "camera": "left",
+      "bbox": {
+        "x": 0.38795,
+        "y": 0.39963,
+        "w": 0.16326,
+        "h": 0.16772
+      },
+      "location": {
+        "lat": 51.984811,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 90.28,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "e7110035-e90d-4527-89b1-64acf80cd68d",
+      "detected_at": "2026-09-25T07:47:31Z",
+      "severity": "critical",
+      "confidence": 0.727,
+      "camera": "right",
+      "bbox": {
+        "x": 0.49813,
+        "y": 0.19113,
+        "w": 0.17957,
+        "h": 0.23184
+      },
+      "location": {
+        "lat": 51.9847838,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 87.25,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "47366698-cedf-4209-84eb-a1a27731deb8",
+      "detected_at": "2026-09-25T07:46:40Z",
+      "severity": "critical",
+      "confidence": 0.668,
+      "camera": "right",
+      "bbox": {
+        "x": 0.09303,
+        "y": 0.16857,
+        "w": 0.08124,
+        "h": 0.25228
+      },
+      "location": {
+        "lat": 51.9847661,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 85.28,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "f7399968-78b4-4142-a669-85c3a884d970",
+      "detected_at": "2026-09-25T07:46:03Z",
+      "severity": "critical",
+      "confidence": 0.64,
+      "camera": "left",
+      "bbox": {
+        "x": 0.38356,
+        "y": 0.76202,
+        "w": 0.14159,
+        "h": 0.14609
+      },
+      "location": {
+        "lat": 51.9847533,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 83.86,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "bf02093f-5828-44cd-b5e5-a775edeedbff",
+      "detected_at": "2026-09-25T07:45:58Z",
+      "severity": "low",
+      "confidence": 0.772,
+      "camera": "right",
+      "bbox": {
+        "x": 0.31663,
+        "y": 0.22618,
+        "w": 0.13884,
+        "h": 0.12262
+      },
+      "location": {
+        "lat": 51.9847515,
+        "lon": 5.662
+      },
+      "row": 1,
+      "metres_from_edge": 83.66,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "cd9d345a-997e-45f3-905b-664fde9771c3",
+      "detected_at": "2026-09-25T07:44:37Z",
+      "severity": "critical",
+      "confidence": 0.958,
+      "camera": "left",
+      "bbox": {
+        "x": 0.07844,
+        "y": 0.14266,
+        "w": 0.20046,
+        "h": 0.1195
+      },
+      "location": {
+        "lat": 51.9847235,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 80.54,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "1ebd248b-83bd-4c08-9d2c-4cada40081ec",
+      "detected_at": "2026-09-25T07:44:04Z",
+      "severity": "moderate",
+      "confidence": 0.757,
+      "camera": "right",
+      "bbox": {
+        "x": 0.75911,
+        "y": 0.50444,
+        "w": 0.13525,
+        "h": 0.1113
+      },
+      "location": {
+        "lat": 51.9847117,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 79.23,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "96963d7a-d543-41f1-9671-f7c7ddb496f6",
+      "detected_at": "2026-09-25T07:42:53Z",
+      "severity": "low",
+      "confidence": 0.639,
+      "camera": "right",
+      "bbox": {
+        "x": 0.47854,
+        "y": 0.20584,
+        "w": 0.11329,
+        "h": 0.179
+      },
+      "location": {
+        "lat": 51.984687,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 76.48,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "a7e5586c-3062-4aea-a442-f7c723b16cef",
+      "detected_at": "2026-09-25T07:42:07Z",
+      "severity": "critical",
+      "confidence": 0.626,
+      "camera": "left",
+      "bbox": {
+        "x": 0.6958,
+        "y": 0.59289,
+        "w": 0.1614,
+        "h": 0.24044
+      },
+      "location": {
+        "lat": 51.984671,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 74.7,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3509ea65-f953-445f-8ce0-d9fa3849cf4d",
+      "detected_at": "2026-09-25T07:41:33Z",
+      "severity": "moderate",
+      "confidence": 0.866,
+      "camera": "right",
+      "bbox": {
+        "x": 0.0928,
+        "y": 0.13774,
+        "w": 0.08696,
+        "h": 0.15849
+      },
+      "location": {
+        "lat": 51.9846593,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 73.39,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3ff17b3e-69e0-405b-9bd8-74fb686a0cad",
+      "detected_at": "2026-09-25T07:41:28Z",
+      "severity": "critical",
+      "confidence": 0.848,
+      "camera": "right",
+      "bbox": {
+        "x": 0.08091,
+        "y": 0.6827,
+        "w": 0.1874,
+        "h": 0.18283
+      },
+      "location": {
+        "lat": 51.9846575,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 73.19,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "ead1cf0d-f6ca-47ca-bc2b-99381e7e5722",
+      "detected_at": "2026-09-25T07:40:49Z",
+      "severity": "moderate",
+      "confidence": 0.962,
+      "camera": "right",
+      "bbox": {
+        "x": 0.46299,
+        "y": 0.30297,
+        "w": 0.18112,
+        "h": 0.20553
+      },
+      "location": {
+        "lat": 51.9846441,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 71.7,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2b4288b2-ffeb-4939-9c8f-cd7f6f285af6",
+      "detected_at": "2026-09-25T07:40:26Z",
+      "severity": "moderate",
+      "confidence": 0.937,
+      "camera": "left",
+      "bbox": {
+        "x": 0.7596,
+        "y": 0.54721,
+        "w": 0.10932,
+        "h": 0.18346
+      },
+      "location": {
+        "lat": 51.9846359,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 70.79,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "d3d6180a-bfe6-406c-a481-fa32ab3e2fc4",
+      "detected_at": "2026-09-25T07:40:00Z",
+      "severity": "low",
+      "confidence": 0.776,
+      "camera": "right",
+      "bbox": {
+        "x": 0.439,
+        "y": 0.2002,
+        "w": 0.1252,
+        "h": 0.21989
+      },
+      "location": {
+        "lat": 51.9846269,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 69.79,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "79f6a252-bc8d-4a52-be06-43c6b7b2002e",
+      "detected_at": "2026-09-25T07:39:40Z",
+      "severity": "moderate",
+      "confidence": 0.912,
+      "camera": "left",
+      "bbox": {
+        "x": 0.51341,
+        "y": 0.10599,
+        "w": 0.1308,
+        "h": 0.2547
+      },
+      "location": {
+        "lat": 51.9846201,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 69.03,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "abedf0be-b44c-41dd-8b89-d2e33c444a25",
+      "detected_at": "2026-09-25T07:39:24Z",
+      "severity": "critical",
+      "confidence": 0.621,
+      "camera": "left",
+      "bbox": {
+        "x": 0.63887,
+        "y": 0.34634,
+        "w": 0.14955,
+        "h": 0.25604
+      },
+      "location": {
+        "lat": 51.9846144,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 68.4,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "f29b7b3f-0454-47b1-bc5e-05351474ba3e",
+      "detected_at": "2026-09-25T07:39:16Z",
+      "severity": "moderate",
+      "confidence": 0.858,
+      "camera": "left",
+      "bbox": {
+        "x": 0.72312,
+        "y": 0.31028,
+        "w": 0.098,
+        "h": 0.25033
+      },
+      "location": {
+        "lat": 51.9846117,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 68.1,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2759c925-d052-4cd0-8c64-8819c07ca433",
+      "detected_at": "2026-09-25T07:38:28Z",
+      "severity": "critical",
+      "confidence": 0.94,
+      "camera": "left",
+      "bbox": {
+        "x": 0.10496,
+        "y": 0.61281,
+        "w": 0.20098,
+        "h": 0.13572
+      },
+      "location": {
+        "lat": 51.9845948,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 66.21,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "c231efa5-da7b-4def-abcc-8c7b9797ab6f",
+      "detected_at": "2026-09-25T07:37:36Z",
+      "severity": "low",
+      "confidence": 0.647,
+      "camera": "left",
+      "bbox": {
+        "x": 0.60852,
+        "y": 0.24735,
+        "w": 0.13096,
+        "h": 0.17655
+      },
+      "location": {
+        "lat": 51.9845766,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 64.19,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "8be499a6-c0fd-49f4-9d32-54829d615fee",
+      "detected_at": "2026-09-25T07:35:22Z",
+      "severity": "low",
+      "confidence": 0.621,
+      "camera": "left",
+      "bbox": {
+        "x": 0.16025,
+        "y": 0.36731,
+        "w": 0.09838,
+        "h": 0.15973
+      },
+      "location": {
+        "lat": 51.9845301,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 59.01,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "spider_mites",
+        "name": "Spider mites",
+        "scientific_name": "Tetranychus urticae",
+        "issue_type": "insect",
+        "what_it_is": "Tiny mites that cause fine pale speckling on leaves, with faint webbing underneath. They multiply fast in hot, dry conditions.",
+        "what_to_do": "Raise the humidity around the plants and rinse the undersides of the leaves. Treat with a miticide if the speckling spreads, and check plants either side.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "78eb7a53-ac1e-401d-afd8-64cf7dcf005f",
+      "detected_at": "2026-09-25T07:30:06Z",
+      "severity": "moderate",
+      "confidence": 0.797,
+      "camera": "right",
+      "bbox": {
+        "x": 0.19758,
+        "y": 0.06678,
+        "w": 0.19832,
+        "h": 0.20214
+      },
+      "location": {
+        "lat": 51.98442,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 46.75,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "f6ed733c-b66c-489c-a9e8-e5f1f435deb5",
+      "detected_at": "2026-09-25T07:29:49Z",
+      "severity": "critical",
+      "confidence": 0.642,
+      "camera": "right",
+      "bbox": {
+        "x": 0.18838,
+        "y": 0.57195,
+        "w": 0.20903,
+        "h": 0.23477
+      },
+      "location": {
+        "lat": 51.984414,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 46.09,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "74348d2c-948e-43bf-aa09-d4736d5b6412",
+      "detected_at": "2026-09-25T07:29:47Z",
+      "severity": "moderate",
+      "confidence": 0.702,
+      "camera": "right",
+      "bbox": {
+        "x": 0.31092,
+        "y": 0.74981,
+        "w": 0.09547,
+        "h": 0.13042
+      },
+      "location": {
+        "lat": 51.9844133,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 46.01,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "287c5f43-6232-419c-af9d-30e47999bcb5",
+      "detected_at": "2026-09-25T07:29:14Z",
+      "severity": "low",
+      "confidence": 0.828,
+      "camera": "left",
+      "bbox": {
+        "x": 0.0914,
+        "y": 0.7325,
+        "w": 0.15091,
+        "h": 0.21678
+      },
+      "location": {
+        "lat": 51.984402,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 44.75,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "spider_mites",
+        "name": "Spider mites",
+        "scientific_name": "Tetranychus urticae",
+        "issue_type": "insect",
+        "what_it_is": "Tiny mites that cause fine pale speckling on leaves, with faint webbing underneath. They multiply fast in hot, dry conditions.",
+        "what_to_do": "Raise the humidity around the plants and rinse the undersides of the leaves. Treat with a miticide if the speckling spreads, and check plants either side.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "4f1ac745-3980-40eb-84be-5fa46fce1dec",
+      "detected_at": "2026-09-25T07:27:04Z",
+      "severity": "moderate",
+      "confidence": 0.912,
+      "camera": "right",
+      "bbox": {
+        "x": 0.23556,
+        "y": 0.52584,
+        "w": 0.11703,
+        "h": 0.10135
+      },
+      "location": {
+        "lat": 51.9843565,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 39.69,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "74727139-65bc-4f42-8b76-1376466f7084",
+      "detected_at": "2026-09-25T07:26:37Z",
+      "severity": "critical",
+      "confidence": 0.805,
+      "camera": "left",
+      "bbox": {
+        "x": 0.14576,
+        "y": 0.13277,
+        "w": 0.20619,
+        "h": 0.1731
+      },
+      "location": {
+        "lat": 51.9843474,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 38.67,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "77b1f24d-e6f3-49e5-a710-e13c9e4d9249",
+      "detected_at": "2026-09-25T07:24:51Z",
+      "severity": "critical",
+      "confidence": 0.833,
+      "camera": "left",
+      "bbox": {
+        "x": 0.57178,
+        "y": 0.20313,
+        "w": 0.09544,
+        "h": 0.12258
+      },
+      "location": {
+        "lat": 51.9843105,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 34.56,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "ddc3d586-3ea3-45e2-b8e3-44eac3d9e710",
+      "detected_at": "2026-09-25T07:23:29Z",
+      "severity": "low",
+      "confidence": 0.805,
+      "camera": "right",
+      "bbox": {
+        "x": 0.05845,
+        "y": 0.69981,
+        "w": 0.20873,
+        "h": 0.12185
+      },
+      "location": {
+        "lat": 51.9842817,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 31.36,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "09405e5d-c1c5-4762-9f21-9328202ede2d",
+      "detected_at": "2026-09-25T07:21:07Z",
+      "severity": "low",
+      "confidence": 0.951,
+      "camera": "left",
+      "bbox": {
+        "x": 0.44965,
+        "y": 0.1325,
+        "w": 0.19831,
+        "h": 0.19257
+      },
+      "location": {
+        "lat": 51.9842326,
+        "lon": 5.6620219
+      },
+      "row": 2,
+      "metres_from_edge": 25.89,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "d389083b-bc16-4255-b47e-acccb647baf6",
+      "detected_at": "2026-09-25T07:19:54Z",
+      "severity": "moderate",
+      "confidence": 0.724,
+      "camera": "left",
+      "bbox": {
+        "x": 0.51236,
+        "y": 0.43694,
+        "w": 0.21126,
+        "h": 0.16045
+      },
+      "location": {
+        "lat": 51.9842071,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 23.05,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "96239c81-4796-4b40-8353-93f087e7a136",
+      "detected_at": "2026-09-25T07:18:31Z",
+      "severity": "moderate",
+      "confidence": 0.926,
+      "camera": "right",
+      "bbox": {
+        "x": 0.46769,
+        "y": 0.74748,
+        "w": 0.13935,
+        "h": 0.12168
+      },
+      "location": {
+        "lat": 51.984178,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 19.82,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "51bd556d-377e-4340-a2dc-d7d0d95dd8c6",
+      "detected_at": "2026-09-25T07:15:18Z",
+      "severity": "critical",
+      "confidence": 0.702,
+      "camera": "left",
+      "bbox": {
+        "x": 0.83218,
+        "y": 0.48535,
+        "w": 0.08261,
+        "h": 0.22502
+      },
+      "location": {
+        "lat": 51.9841109,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 12.34,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "7c2bd49c-1c30-42f9-a7d4-32bf6daab0c2",
+      "detected_at": "2026-09-25T07:14:46Z",
+      "severity": "moderate",
+      "confidence": 0.64,
+      "camera": "left",
+      "bbox": {
+        "x": 0.34072,
+        "y": 0.54332,
+        "w": 0.20846,
+        "h": 0.16445
+      },
+      "location": {
+        "lat": 51.9840999,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 11.12,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "6f7b56e1-3c95-4798-a777-1d65d994d36b",
+      "detected_at": "2026-09-25T07:12:31Z",
+      "severity": "moderate",
+      "confidence": 0.713,
+      "camera": "left",
+      "bbox": {
+        "x": 0.73002,
+        "y": 0.28526,
+        "w": 0.09822,
+        "h": 0.1582
+      },
+      "location": {
+        "lat": 51.9840529,
+        "lon": 5.662
+      },
+      "row": 1,
+      "metres_from_edge": 5.89,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "4ebccc60-01e5-44cf-b379-de7994f75190",
+      "detected_at": "2026-09-25T07:12:19Z",
+      "severity": "critical",
+      "confidence": 0.908,
+      "camera": "left",
+      "bbox": {
+        "x": 0.29895,
+        "y": 0.17041,
+        "w": 0.11447,
+        "h": 0.14232
+      },
+      "location": {
+        "lat": 51.9840487,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 5.42,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3c95ab08-c61f-4888-8f27-c7b7aba9f53c",
+      "detected_at": "2026-09-25T07:12:05Z",
+      "severity": "moderate",
+      "confidence": 0.702,
+      "camera": "right",
+      "bbox": {
+        "x": 0.84571,
+        "y": 0.175,
+        "w": 0.09392,
+        "h": 0.24393
+      },
+      "location": {
+        "lat": 51.9840436,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 4.85,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "dd348db0-ac44-435c-8e5b-7af3d06b45b5",
+      "detected_at": "2026-09-24T08:00:31Z",
+      "severity": "critical",
+      "confidence": 0.718,
+      "camera": "left",
+      "bbox": {
+        "x": 0.09653,
+        "y": 0.37679,
+        "w": 0.21198,
+        "h": 0.19508
+      },
+      "location": {
+        "lat": 51.9848727,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 97.15,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3b31eae7-39b7-4f7f-b1e4-345db54473b4",
+      "detected_at": "2026-09-24T07:59:17Z",
+      "severity": "critical",
+      "confidence": 0.616,
+      "camera": "right",
+      "bbox": {
+        "x": 0.34778,
+        "y": 0.49327,
+        "w": 0.20383,
+        "h": 0.10731
+      },
+      "location": {
+        "lat": 51.9848516,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 94.8,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "fe3dabe9-5465-42ca-be7b-b3583a221308",
+      "detected_at": "2026-09-24T07:59:06Z",
+      "severity": "moderate",
+      "confidence": 0.821,
+      "camera": "left",
+      "bbox": {
+        "x": 0.19055,
+        "y": 0.23951,
+        "w": 0.11322,
+        "h": 0.11116
+      },
+      "location": {
+        "lat": 51.9848485,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 94.45,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "false_positive",
+      "source": "sim"
+    },
+    {
+      "id": "ea1edf7a-556c-4bdf-98cb-afe80be5cd0d",
+      "detected_at": "2026-09-24T07:54:36Z",
+      "severity": "moderate",
+      "confidence": 0.833,
+      "camera": "left",
+      "bbox": {
+        "x": 0.4379,
+        "y": 0.21794,
+        "w": 0.10616,
+        "h": 0.15865
+      },
+      "location": {
+        "lat": 51.9847705,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 85.77,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "confirmed",
+      "source": "sim"
+    },
+    {
+      "id": "50b6c72b-04cf-4238-99c0-5d683b03250e",
+      "detected_at": "2026-09-24T07:53:33Z",
+      "severity": "low",
+      "confidence": 0.73,
+      "camera": "left",
+      "bbox": {
+        "x": 0.17094,
+        "y": 0.74185,
+        "w": 0.09442,
+        "h": 0.15837
+      },
+      "location": {
+        "lat": 51.9847525,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 83.77,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "d3677302-f191-429f-bbe7-5f9071661773",
+      "detected_at": "2026-09-24T07:53:07Z",
+      "severity": "moderate",
+      "confidence": 0.675,
+      "camera": "left",
+      "bbox": {
+        "x": 0.72466,
+        "y": 0.4521,
+        "w": 0.20157,
+        "h": 0.24099
+      },
+      "location": {
+        "lat": 51.984745,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 82.93,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "9df7c823-29db-48df-a8f0-43676d62ddee",
+      "detected_at": "2026-09-24T07:52:21Z",
+      "severity": "critical",
+      "confidence": 0.719,
+      "camera": "left",
+      "bbox": {
+        "x": 0.56922,
+        "y": 0.54026,
+        "w": 0.10954,
+        "h": 0.23326
+      },
+      "location": {
+        "lat": 51.9847317,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 81.45,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "d12146bd-4cb6-44eb-9728-b78936612c3e",
+      "detected_at": "2026-09-24T07:50:19Z",
+      "severity": "critical",
+      "confidence": 0.928,
+      "camera": "left",
+      "bbox": {
+        "x": 0.68583,
+        "y": 0.6893,
+        "w": 0.14713,
+        "h": 0.21278
+      },
+      "location": {
+        "lat": 51.9846967,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 77.56,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "0ee29644-638b-4194-b35e-75f7a1352034",
+      "detected_at": "2026-09-24T07:46:34Z",
+      "severity": "moderate",
+      "confidence": 0.714,
+      "camera": "left",
+      "bbox": {
+        "x": 0.6414,
+        "y": 0.33728,
+        "w": 0.13277,
+        "h": 0.11264
+      },
+      "location": {
+        "lat": 51.984632,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 70.35,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": "treated",
+      "source": "sim"
+    },
+    {
+      "id": "ff9bd1f9-cf44-410c-b2fb-504a1a09d2c1",
+      "detected_at": "2026-09-24T07:43:09Z",
+      "severity": "critical",
+      "confidence": 0.853,
+      "camera": "right",
+      "bbox": {
+        "x": 0.07433,
+        "y": 0.63871,
+        "w": 0.08735,
+        "h": 0.25473
+      },
+      "location": {
+        "lat": 51.9845729,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 63.78,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "confirmed",
+      "source": "sim"
+    },
+    {
+      "id": "ad4c6137-7aa7-47f9-a2ff-3c3610630285",
+      "detected_at": "2026-09-24T07:42:35Z",
+      "severity": "moderate",
+      "confidence": 0.611,
+      "camera": "left",
+      "bbox": {
+        "x": 0.09719,
+        "y": 0.45127,
+        "w": 0.15905,
+        "h": 0.10703
+      },
+      "location": {
+        "lat": 51.9845632,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 62.69,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "false_positive",
+      "source": "sim"
+    },
+    {
+      "id": "b7044e76-20d5-4848-b0b7-108b29a6e2c0",
+      "detected_at": "2026-09-24T07:40:26Z",
+      "severity": "low",
+      "confidence": 0.777,
+      "camera": "right",
+      "bbox": {
+        "x": 0.72995,
+        "y": 0.25638,
+        "w": 0.10536,
+        "h": 0.2105
+      },
+      "location": {
+        "lat": 51.984526,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 58.55,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "04a52013-e3d7-4f68-8516-c2368b5469ce",
+      "detected_at": "2026-09-24T07:35:17Z",
+      "severity": "low",
+      "confidence": 0.647,
+      "camera": "left",
+      "bbox": {
+        "x": 0.09937,
+        "y": 0.48766,
+        "w": 0.20732,
+        "h": 0.22201
+      },
+      "location": {
+        "lat": 51.984437,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 48.65,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "28f4cf4d-99c5-49a8-bb61-30748c5b29e9",
+      "detected_at": "2026-09-24T07:34:54Z",
+      "severity": "low",
+      "confidence": 0.682,
+      "camera": "left",
+      "bbox": {
+        "x": 0.72256,
+        "y": 0.2321,
+        "w": 0.20943,
+        "h": 0.14379
+      },
+      "location": {
+        "lat": 51.9844304,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 47.91,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "9a918ba3-35b2-4278-819d-52dd659c4222",
+      "detected_at": "2026-09-24T07:33:04Z",
+      "severity": "moderate",
+      "confidence": 0.647,
+      "camera": "left",
+      "bbox": {
+        "x": 0.45512,
+        "y": 0.1056,
+        "w": 0.09733,
+        "h": 0.1209
+      },
+      "location": {
+        "lat": 51.9843988,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 44.39,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2945718d-a6f0-4eb8-9c1f-43b679038094",
+      "detected_at": "2026-09-24T07:31:10Z",
+      "severity": "critical",
+      "confidence": 0.872,
+      "camera": "right",
+      "bbox": {
+        "x": 0.77134,
+        "y": 0.43094,
+        "w": 0.13164,
+        "h": 0.15588
+      },
+      "location": {
+        "lat": 51.9843658,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 40.72,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "treated",
+      "source": "sim"
+    },
+    {
+      "id": "779e0b78-5ef0-4774-8c46-5d517ff1e7fc",
+      "detected_at": "2026-09-24T07:30:44Z",
+      "severity": "moderate",
+      "confidence": 0.711,
+      "camera": "left",
+      "bbox": {
+        "x": 0.5464,
+        "y": 0.75479,
+        "w": 0.21518,
+        "h": 0.133
+      },
+      "location": {
+        "lat": 51.9843584,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 39.9,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "0761a9b2-b198-4be4-8498-637b686449f9",
+      "detected_at": "2026-09-24T07:29:46Z",
+      "severity": "critical",
+      "confidence": 0.766,
+      "camera": "right",
+      "bbox": {
+        "x": 0.15037,
+        "y": 0.17186,
+        "w": 0.13267,
+        "h": 0.23409
+      },
+      "location": {
+        "lat": 51.9843415,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 38.02,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "757555f0-86ba-4bf6-b5b8-c6fed0c88ddc",
+      "detected_at": "2026-09-24T07:29:19Z",
+      "severity": "critical",
+      "confidence": 0.622,
+      "camera": "left",
+      "bbox": {
+        "x": 0.55805,
+        "y": 0.64901,
+        "w": 0.13947,
+        "h": 0.1749
+      },
+      "location": {
+        "lat": 51.9843339,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 37.17,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "false_positive",
+      "source": "sim"
+    },
+    {
+      "id": "d11f9187-ae3c-4c92-ae05-8e001e55f720",
+      "detected_at": "2026-09-24T07:27:35Z",
+      "severity": "low",
+      "confidence": 0.82,
+      "camera": "right",
+      "bbox": {
+        "x": 0.24228,
+        "y": 0.06626,
+        "w": 0.12891,
+        "h": 0.23736
+      },
+      "location": {
+        "lat": 51.9843039,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 33.83,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "418d7a7c-dbb8-4405-a733-3a53c8861b1a",
+      "detected_at": "2026-09-24T07:26:31Z",
+      "severity": "moderate",
+      "confidence": 0.766,
+      "camera": "left",
+      "bbox": {
+        "x": 0.60444,
+        "y": 0.69223,
+        "w": 0.19912,
+        "h": 0.24715
+      },
+      "location": {
+        "lat": 51.9842854,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 31.77,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "57342b72-5059-4786-97b6-f0b010a0c5e5",
+      "detected_at": "2026-09-24T07:22:07Z",
+      "severity": "low",
+      "confidence": 0.738,
+      "camera": "right",
+      "bbox": {
+        "x": 0.40384,
+        "y": 0.59254,
+        "w": 0.12807,
+        "h": 0.19117
+      },
+      "location": {
+        "lat": 51.9842095,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 23.32,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "6268e142-8457-429a-93d6-25617befd3b1",
+      "detected_at": "2026-09-24T07:17:47Z",
+      "severity": "low",
+      "confidence": 0.959,
+      "camera": "left",
+      "bbox": {
+        "x": 0.41356,
+        "y": 0.62205,
+        "w": 0.13316,
+        "h": 0.14141
+      },
+      "location": {
+        "lat": 51.9841346,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 14.98,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "93c4a381-0d6f-49d9-8614-f758188be4be",
+      "detected_at": "2026-09-24T07:16:45Z",
+      "severity": "moderate",
+      "confidence": 0.645,
+      "camera": "left",
+      "bbox": {
+        "x": 0.4101,
+        "y": 0.24729,
+        "w": 0.20269,
+        "h": 0.24346
+      },
+      "location": {
+        "lat": 51.9841167,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 12.99,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "confirmed",
+      "source": "sim"
+    },
+    {
+      "id": "00e37a8d-f2ea-46a7-85e2-bc7366fb926b",
+      "detected_at": "2026-09-24T07:15:10Z",
+      "severity": "moderate",
+      "confidence": 0.955,
+      "camera": "right",
+      "bbox": {
+        "x": 0.23714,
+        "y": 0.47728,
+        "w": 0.11464,
+        "h": 0.24228
+      },
+      "location": {
+        "lat": 51.9840893,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 9.94,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "debdfdc4-6077-4a43-8af2-5cba43cb960d",
+      "detected_at": "2026-09-24T07:14:01Z",
+      "severity": "critical",
+      "confidence": 0.848,
+      "camera": "left",
+      "bbox": {
+        "x": 0.45963,
+        "y": 0.46326,
+        "w": 0.1053,
+        "h": 0.15527
+      },
+      "location": {
+        "lat": 51.9840696,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 7.75,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "0eee6c27-59df-4ff3-b035-b0f3993b4d36",
+      "detected_at": "2026-09-24T07:13:37Z",
+      "severity": "critical",
+      "confidence": 0.883,
+      "camera": "left",
+      "bbox": {
+        "x": 0.30857,
+        "y": 0.64532,
+        "w": 0.17249,
+        "h": 0.13011
+      },
+      "location": {
+        "lat": 51.9840625,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 6.96,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "04720b96-5536-4cf7-a962-a7adf8517674",
+      "detected_at": "2026-09-24T07:12:12Z",
+      "severity": "low",
+      "confidence": 0.893,
+      "camera": "left",
+      "bbox": {
+        "x": 0.08442,
+        "y": 0.60246,
+        "w": 0.12066,
+        "h": 0.22911
+      },
+      "location": {
+        "lat": 51.9840383,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 4.26,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "6ff2e21e-e4d0-40d8-a5a9-cfa6579bcca4",
+      "detected_at": "2026-09-23T07:54:26Z",
+      "severity": "moderate",
+      "confidence": 0.795,
+      "camera": "right",
+      "bbox": {
+        "x": 0.37106,
+        "y": 0.2921,
+        "w": 0.08227,
+        "h": 0.17181
+      },
+      "location": {
+        "lat": 51.9848679,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 96.62,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "0c16e452-3099-4ca9-bbad-e474b1781f51",
+      "detected_at": "2026-09-23T07:54:24Z",
+      "severity": "low",
+      "confidence": 0.684,
+      "camera": "left",
+      "bbox": {
+        "x": 0.31907,
+        "y": 0.10108,
+        "w": 0.09661,
+        "h": 0.18554
+      },
+      "location": {
+        "lat": 51.9848672,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 96.54,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "5405cd4c-30df-4a65-9294-38f36da45da0",
+      "detected_at": "2026-09-23T07:52:02Z",
+      "severity": "moderate",
+      "confidence": 0.816,
+      "camera": "right",
+      "bbox": {
+        "x": 0.50839,
+        "y": 0.52863,
+        "w": 0.12944,
+        "h": 0.11931
+      },
+      "location": {
+        "lat": 51.9848211,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 91.4,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": "false_positive",
+      "source": "sim"
+    },
+    {
+      "id": "0d049b46-7c45-4fac-a43f-3c93230a323f",
+      "detected_at": "2026-09-23T07:49:18Z",
+      "severity": "moderate",
+      "confidence": 0.665,
+      "camera": "right",
+      "bbox": {
+        "x": 0.48601,
+        "y": 0.64628,
+        "w": 0.19306,
+        "h": 0.24476
+      },
+      "location": {
+        "lat": 51.9847678,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 85.47,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2d00fc0f-bcf9-4f72-a6af-4e447ffa422f",
+      "detected_at": "2026-09-23T07:48:22Z",
+      "severity": "moderate",
+      "confidence": 0.912,
+      "camera": "right",
+      "bbox": {
+        "x": 0.68184,
+        "y": 0.36446,
+        "w": 0.17197,
+        "h": 0.20889
+      },
+      "location": {
+        "lat": 51.9847495,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 83.43,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "124199d1-f8c9-4cb4-90a4-5ae2256f2371",
+      "detected_at": "2026-09-23T07:47:21Z",
+      "severity": "low",
+      "confidence": 0.833,
+      "camera": "right",
+      "bbox": {
+        "x": 0.14632,
+        "y": 0.62168,
+        "w": 0.19149,
+        "h": 0.17945
+      },
+      "location": {
+        "lat": 51.9847294,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 81.2,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3399ba2b-ecf5-4008-9233-c79e2c4771ed",
+      "detected_at": "2026-09-23T07:47:15Z",
+      "severity": "low",
+      "confidence": 0.744,
+      "camera": "left",
+      "bbox": {
+        "x": 0.34635,
+        "y": 0.50404,
+        "w": 0.21507,
+        "h": 0.21024
+      },
+      "location": {
+        "lat": 51.9847276,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 81.0,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "8392c137-e9e6-401c-ad76-f513b9e6156b",
+      "detected_at": "2026-09-23T07:42:47Z",
+      "severity": "moderate",
+      "confidence": 0.836,
+      "camera": "right",
+      "bbox": {
+        "x": 0.61756,
+        "y": 0.67677,
+        "w": 0.09182,
+        "h": 0.18339
+      },
+      "location": {
+        "lat": 51.9846405,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 71.3,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "265aada6-5d03-457d-bbc2-71b299cdf48e",
+      "detected_at": "2026-09-23T07:41:45Z",
+      "severity": "low",
+      "confidence": 0.794,
+      "camera": "right",
+      "bbox": {
+        "x": 0.26145,
+        "y": 0.28295,
+        "w": 0.19054,
+        "h": 0.24127
+      },
+      "location": {
+        "lat": 51.9846201,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 69.03,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "39f08b9e-4de1-43b8-ae33-45bae1cbf075",
+      "detected_at": "2026-09-23T07:40:37Z",
+      "severity": "low",
+      "confidence": 0.872,
+      "camera": "left",
+      "bbox": {
+        "x": 0.26428,
+        "y": 0.52702,
+        "w": 0.17664,
+        "h": 0.2495
+      },
+      "location": {
+        "lat": 51.9845981,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 66.58,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3958e404-09d3-46c4-93a3-4c3d4d39ada5",
+      "detected_at": "2026-09-23T07:40:31Z",
+      "severity": "low",
+      "confidence": 0.779,
+      "camera": "right",
+      "bbox": {
+        "x": 0.61092,
+        "y": 0.34191,
+        "w": 0.18089,
+        "h": 0.25144
+      },
+      "location": {
+        "lat": 51.9845962,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 66.37,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "49ecf6f6-f2f9-4266-b1d6-1170e17dac8b",
+      "detected_at": "2026-09-23T07:40:10Z",
+      "severity": "moderate",
+      "confidence": 0.83,
+      "camera": "left",
+      "bbox": {
+        "x": 0.24333,
+        "y": 0.75656,
+        "w": 0.13839,
+        "h": 0.12261
+      },
+      "location": {
+        "lat": 51.9845891,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 65.58,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "ae99e463-a1fc-46c9-b58b-5a3c12bfdc3d",
+      "detected_at": "2026-09-23T07:40:05Z",
+      "severity": "low",
+      "confidence": 0.674,
+      "camera": "left",
+      "bbox": {
+        "x": 0.5828,
+        "y": 0.40573,
+        "w": 0.08002,
+        "h": 0.13766
+      },
+      "location": {
+        "lat": 51.9845876,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 65.41,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2b125ca0-a1c0-42bf-bb66-a23c8fcc85d8",
+      "detected_at": "2026-09-23T07:30:48Z",
+      "severity": "low",
+      "confidence": 0.615,
+      "camera": "left",
+      "bbox": {
+        "x": 0.20451,
+        "y": 0.23882,
+        "w": 0.2108,
+        "h": 0.12956
+      },
+      "location": {
+        "lat": 51.9844064,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 45.24,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "0362c667-3d50-4f15-b8bf-0010f2797c8f",
+      "detected_at": "2026-09-23T07:30:39Z",
+      "severity": "low",
+      "confidence": 0.636,
+      "camera": "right",
+      "bbox": {
+        "x": 0.15209,
+        "y": 0.41613,
+        "w": 0.16267,
+        "h": 0.10976
+      },
+      "location": {
+        "lat": 51.9844034,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 44.91,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "spider_mites",
+        "name": "Spider mites",
+        "scientific_name": "Tetranychus urticae",
+        "issue_type": "insect",
+        "what_it_is": "Tiny mites that cause fine pale speckling on leaves, with faint webbing underneath. They multiply fast in hot, dry conditions.",
+        "what_to_do": "Raise the humidity around the plants and rinse the undersides of the leaves. Treat with a miticide if the speckling spreads, and check plants either side.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "6d6e45fd-35b8-46ff-9b83-79343738f6ab",
+      "detected_at": "2026-09-23T07:29:17Z",
+      "severity": "low",
+      "confidence": 0.914,
+      "camera": "left",
+      "bbox": {
+        "x": 0.38108,
+        "y": 0.16749,
+        "w": 0.15178,
+        "h": 0.17007
+      },
+      "location": {
+        "lat": 51.9843768,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 41.94,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2073aaed-7c74-43b4-9ca7-977108a57005",
+      "detected_at": "2026-09-23T07:29:13Z",
+      "severity": "low",
+      "confidence": 0.77,
+      "camera": "left",
+      "bbox": {
+        "x": 0.64635,
+        "y": 0.27609,
+        "w": 0.19924,
+        "h": 0.14523
+      },
+      "location": {
+        "lat": 51.9843754,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 41.79,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "b3cd40ab-0c51-409c-b6fd-a4586dbea59b",
+      "detected_at": "2026-09-23T07:27:21Z",
+      "severity": "low",
+      "confidence": 0.739,
+      "camera": "left",
+      "bbox": {
+        "x": 0.72247,
+        "y": 0.57199,
+        "w": 0.19519,
+        "h": 0.19131
+      },
+      "location": {
+        "lat": 51.984339,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 37.74,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "4582f489-e419-4044-ae24-d72f45f1b228",
+      "detected_at": "2026-09-23T07:25:13Z",
+      "severity": "low",
+      "confidence": 0.811,
+      "camera": "left",
+      "bbox": {
+        "x": 0.5858,
+        "y": 0.08779,
+        "w": 0.08768,
+        "h": 0.23354
+      },
+      "location": {
+        "lat": 51.9842973,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 33.1,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "53d2872c-2496-4b05-8755-2b509fc37e99",
+      "detected_at": "2026-09-23T07:24:23Z",
+      "severity": "low",
+      "confidence": 0.814,
+      "camera": "right",
+      "bbox": {
+        "x": 0.6392,
+        "y": 0.37817,
+        "w": 0.19855,
+        "h": 0.13411
+      },
+      "location": {
+        "lat": 51.9842812,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 31.3,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": "confirmed",
+      "source": "sim"
+    },
+    {
+      "id": "187a113b-1917-449b-ae10-cf9bafed4dbc",
+      "detected_at": "2026-09-23T07:21:26Z",
+      "severity": "low",
+      "confidence": 0.7,
+      "camera": "right",
+      "bbox": {
+        "x": 0.30742,
+        "y": 0.52443,
+        "w": 0.08855,
+        "h": 0.22447
+      },
+      "location": {
+        "lat": 51.9842234,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 24.87,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "5b23202e-0b92-4f9f-8d8d-6dff96b1df20",
+      "detected_at": "2026-09-23T07:20:10Z",
+      "severity": "low",
+      "confidence": 0.94,
+      "camera": "right",
+      "bbox": {
+        "x": 0.21482,
+        "y": 0.10449,
+        "w": 0.13969,
+        "h": 0.17153
+      },
+      "location": {
+        "lat": 51.9841986,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 22.11,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "aacf81d2-19bc-4522-b133-690fe84abaf2",
+      "detected_at": "2026-09-23T07:19:49Z",
+      "severity": "moderate",
+      "confidence": 0.796,
+      "camera": "left",
+      "bbox": {
+        "x": 0.07191,
+        "y": 0.67582,
+        "w": 0.16684,
+        "h": 0.23141
+      },
+      "location": {
+        "lat": 51.9841918,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 21.35,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2eb33ad0-ddf2-4495-a6dd-50d2c5fd0a6c",
+      "detected_at": "2026-09-23T07:18:41Z",
+      "severity": "low",
+      "confidence": 0.908,
+      "camera": "right",
+      "bbox": {
+        "x": 0.64643,
+        "y": 0.20311,
+        "w": 0.15052,
+        "h": 0.14462
+      },
+      "location": {
+        "lat": 51.9841699,
+        "lon": 5.6620219
+      },
+      "row": 2,
+      "metres_from_edge": 18.91,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "9eae2639-f12a-4c26-91d0-74e33a6b94f3",
+      "detected_at": "2026-09-23T07:18:01Z",
+      "severity": "low",
+      "confidence": 0.881,
+      "camera": "right",
+      "bbox": {
+        "x": 0.73937,
+        "y": 0.44433,
+        "w": 0.16124,
+        "h": 0.15236
+      },
+      "location": {
+        "lat": 51.9841567,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 17.44,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "1aa91dc6-2979-49fb-b923-a01c08f4307f",
+      "detected_at": "2026-09-23T07:17:52Z",
+      "severity": "low",
+      "confidence": 0.862,
+      "camera": "left",
+      "bbox": {
+        "x": 0.2345,
+        "y": 0.34476,
+        "w": 0.12685,
+        "h": 0.12791
+      },
+      "location": {
+        "lat": 51.9841537,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 17.11,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "e6fbad41-2a9e-4ca3-bffe-63ba93b5dd66",
+      "detected_at": "2026-09-23T07:17:02Z",
+      "severity": "low",
+      "confidence": 0.959,
+      "camera": "right",
+      "bbox": {
+        "x": 0.13856,
+        "y": 0.21367,
+        "w": 0.14095,
+        "h": 0.12195
+      },
+      "location": {
+        "lat": 51.9841376,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 15.32,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "4f5c7190-4fed-4cb4-8161-845069be509c",
+      "detected_at": "2026-09-23T07:15:17Z",
+      "severity": "low",
+      "confidence": 0.627,
+      "camera": "right",
+      "bbox": {
+        "x": 0.20274,
+        "y": 0.12827,
+        "w": 0.20385,
+        "h": 0.21349
+      },
+      "location": {
+        "lat": 51.9841032,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 11.49,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "bf7d5698-e414-4078-948a-53c4afb854eb",
+      "detected_at": "2026-09-23T07:13:39Z",
+      "severity": "low",
+      "confidence": 0.904,
+      "camera": "right",
+      "bbox": {
+        "x": 0.20483,
+        "y": 0.27797,
+        "w": 0.19192,
+        "h": 0.1633
+      },
+      "location": {
+        "lat": 51.9840716,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 7.97,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "d2882d88-31c0-4ccc-bc38-2608ab4d77cf",
+      "detected_at": "2026-09-23T07:12:19Z",
+      "severity": "moderate",
+      "confidence": 0.86,
+      "camera": "left",
+      "bbox": {
+        "x": 0.35443,
+        "y": 0.09807,
+        "w": 0.08547,
+        "h": 0.1103
+      },
+      "location": {
+        "lat": 51.9840455,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 5.06,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "false_positive",
+      "source": "sim"
+    },
+    {
+      "id": "78cf39d1-5bd9-4747-867b-bea9dc6e68b1",
+      "detected_at": "2026-09-22T07:55:02Z",
+      "severity": "low",
+      "confidence": 0.614,
+      "camera": "right",
+      "bbox": {
+        "x": 0.41172,
+        "y": 0.14766,
+        "w": 0.20507,
+        "h": 0.23183
+      },
+      "location": {
+        "lat": 51.9848609,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 95.83,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "b4431ccb-0bd9-4d8a-84ce-df231953013d",
+      "detected_at": "2026-09-22T07:52:11Z",
+      "severity": "moderate",
+      "confidence": 0.826,
+      "camera": "left",
+      "bbox": {
+        "x": 0.1157,
+        "y": 0.36879,
+        "w": 0.09154,
+        "h": 0.24604
+      },
+      "location": {
+        "lat": 51.9848063,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 89.76,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "b119ae75-baf8-4520-a1e8-7fab73bb8ff2",
+      "detected_at": "2026-09-22T07:48:31Z",
+      "severity": "moderate",
+      "confidence": 0.745,
+      "camera": "left",
+      "bbox": {
+        "x": 0.12696,
+        "y": 0.38758,
+        "w": 0.17568,
+        "h": 0.13514
+      },
+      "location": {
+        "lat": 51.9847363,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 81.97,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": "treated",
+      "source": "sim"
+    },
+    {
+      "id": "820e59d7-de09-4ab0-92bc-9cedb84ce4dd",
+      "detected_at": "2026-09-22T07:47:52Z",
+      "severity": "low",
+      "confidence": 0.886,
+      "camera": "right",
+      "bbox": {
+        "x": 0.22358,
+        "y": 0.68836,
+        "w": 0.19697,
+        "h": 0.2585
+      },
+      "location": {
+        "lat": 51.9847239,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 80.59,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": "confirmed",
+      "source": "sim"
+    },
+    {
+      "id": "c7930d08-0f68-42bf-8177-01b338651907",
+      "detected_at": "2026-09-22T07:47:44Z",
+      "severity": "low",
+      "confidence": 0.949,
+      "camera": "left",
+      "bbox": {
+        "x": 0.15602,
+        "y": 0.33958,
+        "w": 0.19602,
+        "h": 0.13019
+      },
+      "location": {
+        "lat": 51.9847213,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 80.3,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "spider_mites",
+        "name": "Spider mites",
+        "scientific_name": "Tetranychus urticae",
+        "issue_type": "insect",
+        "what_it_is": "Tiny mites that cause fine pale speckling on leaves, with faint webbing underneath. They multiply fast in hot, dry conditions.",
+        "what_to_do": "Raise the humidity around the plants and rinse the undersides of the leaves. Treat with a miticide if the speckling spreads, and check plants either side.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "96870b8c-3028-40f2-8d33-1342d54222f4",
+      "detected_at": "2026-09-22T07:47:41Z",
+      "severity": "low",
+      "confidence": 0.85,
+      "camera": "left",
+      "bbox": {
+        "x": 0.22867,
+        "y": 0.57386,
+        "w": 0.10224,
+        "h": 0.1861
+      },
+      "location": {
+        "lat": 51.9847203,
+        "lon": 5.6620219
+      },
+      "row": 2,
+      "metres_from_edge": 80.18,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "04948535-71b6-4fda-8a7d-907fd69089ff",
+      "detected_at": "2026-09-22T07:47:10Z",
+      "severity": "low",
+      "confidence": 0.806,
+      "camera": "right",
+      "bbox": {
+        "x": 0.40979,
+        "y": 0.40645,
+        "w": 0.15895,
+        "h": 0.22576
+      },
+      "location": {
+        "lat": 51.9847107,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 79.11,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "585b9153-cca3-4b41-b987-3409a32bc716",
+      "detected_at": "2026-09-22T07:46:19Z",
+      "severity": "moderate",
+      "confidence": 0.895,
+      "camera": "right",
+      "bbox": {
+        "x": 0.61972,
+        "y": 0.18745,
+        "w": 0.16504,
+        "h": 0.16853
+      },
+      "location": {
+        "lat": 51.9846944,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 77.3,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "ca4f8733-e21b-4f46-86e0-33231b2aff79",
+      "detected_at": "2026-09-22T07:43:34Z",
+      "severity": "low",
+      "confidence": 0.958,
+      "camera": "left",
+      "bbox": {
+        "x": 0.29826,
+        "y": 0.73196,
+        "w": 0.14155,
+        "h": 0.14902
+      },
+      "location": {
+        "lat": 51.9846416,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 71.42,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "f98f4dc6-c718-47cc-8721-d0caf97ac10d",
+      "detected_at": "2026-09-22T07:42:05Z",
+      "severity": "moderate",
+      "confidence": 0.621,
+      "camera": "right",
+      "bbox": {
+        "x": 0.53814,
+        "y": 0.64668,
+        "w": 0.15815,
+        "h": 0.20299
+      },
+      "location": {
+        "lat": 51.9846133,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 68.27,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "04689e5f-b799-4063-860f-62149801f57d",
+      "detected_at": "2026-09-22T07:38:41Z",
+      "severity": "moderate",
+      "confidence": 0.871,
+      "camera": "right",
+      "bbox": {
+        "x": 0.45234,
+        "y": 0.43082,
+        "w": 0.09261,
+        "h": 0.22785
+      },
+      "location": {
+        "lat": 51.9845482,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 61.03,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3649a8de-85ad-4f34-a8ad-8e63de7befb5",
+      "detected_at": "2026-09-22T07:38:39Z",
+      "severity": "moderate",
+      "confidence": 0.742,
+      "camera": "right",
+      "bbox": {
+        "x": 0.33577,
+        "y": 0.24151,
+        "w": 0.18942,
+        "h": 0.21592
+      },
+      "location": {
+        "lat": 51.9845479,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 60.99,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "e927e58d-a861-47ea-b682-f25d9f53ef23",
+      "detected_at": "2026-09-22T07:35:52Z",
+      "severity": "moderate",
+      "confidence": 0.673,
+      "camera": "left",
+      "bbox": {
+        "x": 0.2956,
+        "y": 0.5443,
+        "w": 0.12274,
+        "h": 0.14857
+      },
+      "location": {
+        "lat": 51.9844944,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 55.04,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "1f6ebe2b-255a-4bfa-9bb6-943332f22fea",
+      "detected_at": "2026-09-22T07:28:31Z",
+      "severity": "low",
+      "confidence": 0.702,
+      "camera": "right",
+      "bbox": {
+        "x": 0.33017,
+        "y": 0.7294,
+        "w": 0.14394,
+        "h": 0.17354
+      },
+      "location": {
+        "lat": 51.9843542,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 39.43,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3e36b7c7-a874-4340-a679-6884413ff81e",
+      "detected_at": "2026-09-22T07:25:21Z",
+      "severity": "low",
+      "confidence": 0.803,
+      "camera": "right",
+      "bbox": {
+        "x": 0.15439,
+        "y": 0.48709,
+        "w": 0.09485,
+        "h": 0.19317
+      },
+      "location": {
+        "lat": 51.9842934,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 32.66,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "spider_mites",
+        "name": "Spider mites",
+        "scientific_name": "Tetranychus urticae",
+        "issue_type": "insect",
+        "what_it_is": "Tiny mites that cause fine pale speckling on leaves, with faint webbing underneath. They multiply fast in hot, dry conditions.",
+        "what_to_do": "Raise the humidity around the plants and rinse the undersides of the leaves. Treat with a miticide if the speckling spreads, and check plants either side.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "47026226-dc97-4582-b63f-3fea93d12f40",
+      "detected_at": "2026-09-22T07:23:36Z",
+      "severity": "low",
+      "confidence": 0.69,
+      "camera": "left",
+      "bbox": {
+        "x": 0.3007,
+        "y": 0.30318,
+        "w": 0.10988,
+        "h": 0.16427
+      },
+      "location": {
+        "lat": 51.9842602,
+        "lon": 5.662
+      },
+      "row": 1,
+      "metres_from_edge": 28.97,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "8ae04923-b2ca-45f2-8bcd-c32a94a55907",
+      "detected_at": "2026-09-22T07:17:10Z",
+      "severity": "low",
+      "confidence": 0.93,
+      "camera": "left",
+      "bbox": {
+        "x": 0.27785,
+        "y": 0.18749,
+        "w": 0.08682,
+        "h": 0.10193
+      },
+      "location": {
+        "lat": 51.9841372,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 15.27,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "e08e30d3-7de4-4010-8660-3cdd70d46192",
+      "detected_at": "2026-09-22T07:14:21Z",
+      "severity": "moderate",
+      "confidence": 0.909,
+      "camera": "left",
+      "bbox": {
+        "x": 0.62174,
+        "y": 0.61153,
+        "w": 0.13477,
+        "h": 0.11981
+      },
+      "location": {
+        "lat": 51.9840835,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 9.29,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3295c446-6131-4330-95ab-6094d581f6b8",
+      "detected_at": "2026-09-22T07:12:54Z",
+      "severity": "low",
+      "confidence": 0.874,
+      "camera": "left",
+      "bbox": {
+        "x": 0.59232,
+        "y": 0.67148,
+        "w": 0.14679,
+        "h": 0.13425
+      },
+      "location": {
+        "lat": 51.9840557,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 6.2,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3e1c84f0-d1b0-421c-858c-33a40152d54a",
+      "detected_at": "2026-09-22T07:12:40Z",
+      "severity": "moderate",
+      "confidence": 0.884,
+      "camera": "left",
+      "bbox": {
+        "x": 0.31072,
+        "y": 0.74939,
+        "w": 0.15964,
+        "h": 0.12357
+      },
+      "location": {
+        "lat": 51.984051,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 5.68,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "4cc3cda8-59ce-4911-8fb1-0a4ee38f3696",
+      "detected_at": "2026-09-22T07:12:39Z",
+      "severity": "moderate",
+      "confidence": 0.72,
+      "camera": "left",
+      "bbox": {
+        "x": 0.18997,
+        "y": 0.19408,
+        "w": 0.20655,
+        "h": 0.23287
+      },
+      "location": {
+        "lat": 51.9840508,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 5.66,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "76966b2e-193d-453d-96d1-f71301efb230",
+      "detected_at": "2026-09-21T07:49:58Z",
+      "severity": "low",
+      "confidence": 0.923,
+      "camera": "left",
+      "bbox": {
+        "x": 0.15008,
+        "y": 0.72758,
+        "w": 0.15443,
+        "h": 0.21353
+      },
+      "location": {
+        "lat": 51.984798,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 88.83,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "c7674184-37c4-4932-ab63-9e08948f2042",
+      "detected_at": "2026-09-21T07:47:42Z",
+      "severity": "low",
+      "confidence": 0.864,
+      "camera": "left",
+      "bbox": {
+        "x": 0.77436,
+        "y": 0.73264,
+        "w": 0.15831,
+        "h": 0.17886
+      },
+      "location": {
+        "lat": 51.9847526,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 83.78,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": "confirmed",
+      "source": "sim"
+    },
+    {
+      "id": "0ba55d1e-36a2-4eff-a430-462b7574ec97",
+      "detected_at": "2026-09-21T07:47:11Z",
+      "severity": "low",
+      "confidence": 0.958,
+      "camera": "right",
+      "bbox": {
+        "x": 0.35942,
+        "y": 0.41054,
+        "w": 0.15064,
+        "h": 0.19984
+      },
+      "location": {
+        "lat": 51.9847424,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 82.64,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "949e74eb-d45b-463c-bc73-4c820f44060c",
+      "detected_at": "2026-09-21T07:45:55Z",
+      "severity": "low",
+      "confidence": 0.831,
+      "camera": "left",
+      "bbox": {
+        "x": 0.68146,
+        "y": 0.19948,
+        "w": 0.08835,
+        "h": 0.24053
+      },
+      "location": {
+        "lat": 51.9847171,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 79.83,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "912afef3-0c3f-4896-a745-3b49947a003a",
+      "detected_at": "2026-09-21T07:45:22Z",
+      "severity": "low",
+      "confidence": 0.737,
+      "camera": "right",
+      "bbox": {
+        "x": 0.37797,
+        "y": 0.54647,
+        "w": 0.0841,
+        "h": 0.15774
+      },
+      "location": {
+        "lat": 51.9847062,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 78.61,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": "false_positive",
+      "source": "sim"
+    },
+    {
+      "id": "e8288680-cc0f-414f-acf6-954d99660b3f",
+      "detected_at": "2026-09-21T07:37:30Z",
+      "severity": "low",
+      "confidence": 0.783,
+      "camera": "right",
+      "bbox": {
+        "x": 0.31778,
+        "y": 0.54777,
+        "w": 0.08621,
+        "h": 0.18268
+      },
+      "location": {
+        "lat": 51.9845491,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 61.13,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "f5f5abdf-576f-48a5-9b0d-585c54144213",
+      "detected_at": "2026-09-21T07:37:00Z",
+      "severity": "low",
+      "confidence": 0.962,
+      "camera": "right",
+      "bbox": {
+        "x": 0.42526,
+        "y": 0.15435,
+        "w": 0.11623,
+        "h": 0.17973
+      },
+      "location": {
+        "lat": 51.984539,
+        "lon": 5.6620219
+      },
+      "row": 2,
+      "metres_from_edge": 60.0,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "ab830045-14b0-4beb-b7e8-f7d8a26ef8d3",
+      "detected_at": "2026-09-21T07:35:54Z",
+      "severity": "low",
+      "confidence": 0.765,
+      "camera": "left",
+      "bbox": {
+        "x": 0.82261,
+        "y": 0.09464,
+        "w": 0.08029,
+        "h": 0.10946
+      },
+      "location": {
+        "lat": 51.9845173,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 57.59,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2bfc4fd6-ebc5-4f17-85d4-8ee862dd0534",
+      "detected_at": "2026-09-21T07:33:38Z",
+      "severity": "low",
+      "confidence": 0.899,
+      "camera": "left",
+      "bbox": {
+        "x": 0.1352,
+        "y": 0.53316,
+        "w": 0.08086,
+        "h": 0.1714
+      },
+      "location": {
+        "lat": 51.9844718,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 52.52,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "8a48b5be-c5fb-4fa6-a800-55ab057eef9f",
+      "detected_at": "2026-09-21T07:33:09Z",
+      "severity": "low",
+      "confidence": 0.7,
+      "camera": "right",
+      "bbox": {
+        "x": 0.1867,
+        "y": 0.27702,
+        "w": 0.09925,
+        "h": 0.13038
+      },
+      "location": {
+        "lat": 51.9844624,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 51.47,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "8877eeeb-72c5-4044-a9d9-69589e6353f0",
+      "detected_at": "2026-09-21T07:32:03Z",
+      "severity": "low",
+      "confidence": 0.77,
+      "camera": "left",
+      "bbox": {
+        "x": 0.68102,
+        "y": 0.69316,
+        "w": 0.12744,
+        "h": 0.20002
+      },
+      "location": {
+        "lat": 51.9844404,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 49.02,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "9cf7d09c-48cd-41b4-93b8-e162d3ebfe2f",
+      "detected_at": "2026-09-21T07:30:02Z",
+      "severity": "low",
+      "confidence": 0.943,
+      "camera": "left",
+      "bbox": {
+        "x": 0.40139,
+        "y": 0.44692,
+        "w": 0.17362,
+        "h": 0.169
+      },
+      "location": {
+        "lat": 51.9844001,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 44.54,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "spider_mites",
+        "name": "Spider mites",
+        "scientific_name": "Tetranychus urticae",
+        "issue_type": "insect",
+        "what_it_is": "Tiny mites that cause fine pale speckling on leaves, with faint webbing underneath. They multiply fast in hot, dry conditions.",
+        "what_to_do": "Raise the humidity around the plants and rinse the undersides of the leaves. Treat with a miticide if the speckling spreads, and check plants either side.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "12cde40b-241b-4ae0-9d9d-9436dd812b98",
+      "detected_at": "2026-09-21T07:29:25Z",
+      "severity": "low",
+      "confidence": 0.907,
+      "camera": "right",
+      "bbox": {
+        "x": 0.10932,
+        "y": 0.52264,
+        "w": 0.10984,
+        "h": 0.10746
+      },
+      "location": {
+        "lat": 51.9843879,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 43.18,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "1bd89b29-4525-4871-b6e4-e66412407e15",
+      "detected_at": "2026-09-21T07:29:05Z",
+      "severity": "low",
+      "confidence": 0.658,
+      "camera": "left",
+      "bbox": {
+        "x": 0.16644,
+        "y": 0.44671,
+        "w": 0.15052,
+        "h": 0.19726
+      },
+      "location": {
+        "lat": 51.9843812,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 42.44,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "late_blight",
+        "name": "Late blight",
+        "scientific_name": "Phytophthora infestans",
+        "issue_type": "fungus",
+        "what_it_is": "A fast-moving fungus that thrives in warm, wet weather. Leaves get dark, greasy patches with a pale fuzzy edge, and the plant can collapse within days.",
+        "what_to_do": "Act quickly. Remove and bag badly affected plants \u2014 do not compost them. Spray the surrounding rows with a protective fungicide, and avoid watering the leaves.",
+        "action_within_days": 2
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "0e0e48fa-aebd-4ce8-aece-ee7640ff2a9c",
+      "detected_at": "2026-09-21T07:26:55Z",
+      "severity": "moderate",
+      "confidence": 0.918,
+      "camera": "left",
+      "bbox": {
+        "x": 0.18767,
+        "y": 0.45171,
+        "w": 0.14127,
+        "h": 0.23288
+      },
+      "location": {
+        "lat": 51.9843379,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 37.62,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "e81640f1-9c2e-41d8-908a-c1af03cc7706",
+      "detected_at": "2026-09-21T07:24:50Z",
+      "severity": "low",
+      "confidence": 0.7,
+      "camera": "left",
+      "bbox": {
+        "x": 0.25387,
+        "y": 0.24115,
+        "w": 0.21396,
+        "h": 0.20595
+      },
+      "location": {
+        "lat": 51.9842963,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 32.98,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "fd6c67ed-32b8-45eb-a25e-d09c92b75d4d",
+      "detected_at": "2026-09-21T07:16:59Z",
+      "severity": "low",
+      "confidence": 0.852,
+      "camera": "right",
+      "bbox": {
+        "x": 0.18779,
+        "y": 0.2889,
+        "w": 0.10218,
+        "h": 0.15446
+      },
+      "location": {
+        "lat": 51.9841397,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 15.55,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "5f12443c-e08a-4b22-8d69-c379b8ed978a",
+      "detected_at": "2026-09-21T07:14:43Z",
+      "severity": "low",
+      "confidence": 0.86,
+      "camera": "right",
+      "bbox": {
+        "x": 0.55825,
+        "y": 0.14173,
+        "w": 0.21998,
+        "h": 0.21051
+      },
+      "location": {
+        "lat": 51.9840944,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 10.51,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "c053304b-4b5c-451b-80b5-8a5ade9656a4",
+      "detected_at": "2026-09-21T07:13:42Z",
+      "severity": "low",
+      "confidence": 0.841,
+      "camera": "right",
+      "bbox": {
+        "x": 0.36268,
+        "y": 0.07354,
+        "w": 0.19618,
+        "h": 0.10244
+      },
+      "location": {
+        "lat": 51.9840739,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 8.23,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "spider_mites",
+        "name": "Spider mites",
+        "scientific_name": "Tetranychus urticae",
+        "issue_type": "insect",
+        "what_it_is": "Tiny mites that cause fine pale speckling on leaves, with faint webbing underneath. They multiply fast in hot, dry conditions.",
+        "what_to_do": "Raise the humidity around the plants and rinse the undersides of the leaves. Treat with a miticide if the speckling spreads, and check plants either side.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "95953486-5dd5-4466-8151-1673422d5f16",
+      "detected_at": "2026-09-20T07:57:28Z",
+      "severity": "low",
+      "confidence": 0.879,
+      "camera": "left",
+      "bbox": {
+        "x": 0.44973,
+        "y": 0.35458,
+        "w": 0.18786,
+        "h": 0.19755
+      },
+      "location": {
+        "lat": 51.9848703,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 96.88,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "46047950-2d5e-443e-8ec3-376b54ea85d4",
+      "detected_at": "2026-09-20T07:56:03Z",
+      "severity": "low",
+      "confidence": 0.806,
+      "camera": "right",
+      "bbox": {
+        "x": 0.1143,
+        "y": 0.52439,
+        "w": 0.19844,
+        "h": 0.1111
+      },
+      "location": {
+        "lat": 51.9848444,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 94.0,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "fdac8c29-6574-4cdb-96ae-65e26c35a0f3",
+      "detected_at": "2026-09-20T07:53:58Z",
+      "severity": "low",
+      "confidence": 0.9,
+      "camera": "right",
+      "bbox": {
+        "x": 0.70831,
+        "y": 0.70323,
+        "w": 0.14818,
+        "h": 0.12976
+      },
+      "location": {
+        "lat": 51.9848062,
+        "lon": 5.662
+      },
+      "row": 1,
+      "metres_from_edge": 89.75,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "cd425c55-fe66-45ee-acb6-9c3d2fd9f91d",
+      "detected_at": "2026-09-20T07:53:23Z",
+      "severity": "low",
+      "confidence": 0.704,
+      "camera": "right",
+      "bbox": {
+        "x": 0.73405,
+        "y": 0.63708,
+        "w": 0.13277,
+        "h": 0.23439
+      },
+      "location": {
+        "lat": 51.9847954,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 88.54,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": "treated",
+      "source": "sim"
+    },
+    {
+      "id": "43a5448d-75a5-4ea8-859b-acf357304b3a",
+      "detected_at": "2026-09-20T07:50:03Z",
+      "severity": "low",
+      "confidence": 0.738,
+      "camera": "right",
+      "bbox": {
+        "x": 0.2752,
+        "y": 0.44808,
+        "w": 0.12854,
+        "h": 0.14946
+      },
+      "location": {
+        "lat": 51.9847343,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 81.74,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "bed0e31c-19c6-4cab-9b33-cf0d8dad4282",
+      "detected_at": "2026-09-20T07:41:37Z",
+      "severity": "moderate",
+      "confidence": 0.966,
+      "camera": "right",
+      "bbox": {
+        "x": 0.76631,
+        "y": 0.50725,
+        "w": 0.17181,
+        "h": 0.25368
+      },
+      "location": {
+        "lat": 51.9845799,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 64.55,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "3d8198d4-f48b-4521-bbe7-7991ffde96eb",
+      "detected_at": "2026-09-20T07:32:42Z",
+      "severity": "low",
+      "confidence": 0.636,
+      "camera": "left",
+      "bbox": {
+        "x": 0.47986,
+        "y": 0.15513,
+        "w": 0.08544,
+        "h": 0.18029
+      },
+      "location": {
+        "lat": 51.9844165,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 46.36,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "839c8bae-6510-485e-a771-4c66a68c0ea8",
+      "detected_at": "2026-09-20T07:30:21Z",
+      "severity": "low",
+      "confidence": 0.895,
+      "camera": "left",
+      "bbox": {
+        "x": 0.38913,
+        "y": 0.66935,
+        "w": 0.16741,
+        "h": 0.22947
+      },
+      "location": {
+        "lat": 51.9843732,
+        "lon": 5.662
+      },
+      "row": 1,
+      "metres_from_edge": 41.55,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "6a70955b-e8c2-4e06-ac02-84bfd0900f8e",
+      "detected_at": "2026-09-20T07:19:50Z",
+      "severity": "low",
+      "confidence": 0.698,
+      "camera": "left",
+      "bbox": {
+        "x": 0.62018,
+        "y": 0.34333,
+        "w": 0.197,
+        "h": 0.25491
+      },
+      "location": {
+        "lat": 51.9841806,
+        "lon": 5.6620219
+      },
+      "row": 2,
+      "metres_from_edge": 20.1,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "bdd72bbb-115e-4ec8-b156-a3a8679d688c",
+      "detected_at": "2026-09-20T07:19:35Z",
+      "severity": "low",
+      "confidence": 0.677,
+      "camera": "left",
+      "bbox": {
+        "x": 0.8204,
+        "y": 0.44235,
+        "w": 0.12359,
+        "h": 0.16041
+      },
+      "location": {
+        "lat": 51.984176,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 19.59,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "1d3c5287-a160-43b1-bd6d-ed94d5221c7e",
+      "detected_at": "2026-09-20T07:19:22Z",
+      "severity": "low",
+      "confidence": 0.637,
+      "camera": "left",
+      "bbox": {
+        "x": 0.09668,
+        "y": 0.62407,
+        "w": 0.14032,
+        "h": 0.2567
+      },
+      "location": {
+        "lat": 51.9841719,
+        "lon": 5.6621313
+      },
+      "row": 7,
+      "metres_from_edge": 19.14,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": "confirmed",
+      "source": "sim"
+    },
+    {
+      "id": "1d76e760-b09b-468e-8592-d74f74856f5b",
+      "detected_at": "2026-09-20T07:17:46Z",
+      "severity": "low",
+      "confidence": 0.774,
+      "camera": "left",
+      "bbox": {
+        "x": 0.38727,
+        "y": 0.63254,
+        "w": 0.17446,
+        "h": 0.11698
+      },
+      "location": {
+        "lat": 51.9841425,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 15.86,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "399b587b-0361-4d9f-b88f-44738bf5f60a",
+      "detected_at": "2026-09-20T07:16:57Z",
+      "severity": "low",
+      "confidence": 0.968,
+      "camera": "right",
+      "bbox": {
+        "x": 0.73145,
+        "y": 0.50701,
+        "w": 0.15443,
+        "h": 0.2078
+      },
+      "location": {
+        "lat": 51.9841277,
+        "lon": 5.6620656
+      },
+      "row": 4,
+      "metres_from_edge": 14.21,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_miner",
+        "name": "Leaf miner",
+        "scientific_name": "Liriomyza spp.",
+        "issue_type": "insect",
+        "what_it_is": "Pale winding trails inside the leaf, made by larvae feeding between its surfaces. Light damage is cosmetic; heavy damage reduces the crop.",
+        "what_to_do": "Pick off and destroy the mined leaves. Set yellow sticky traps to catch the adult flies. Only spray if a large share of the leaves on a plant are affected.",
+        "action_within_days": 10
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "2589bece-6e1e-46c7-8ec6-6aac205515f4",
+      "detected_at": "2026-09-20T07:14:50Z",
+      "severity": "moderate",
+      "confidence": 0.91,
+      "camera": "right",
+      "bbox": {
+        "x": 0.38509,
+        "y": 0.10634,
+        "w": 0.15037,
+        "h": 0.17857
+      },
+      "location": {
+        "lat": 51.9840888,
+        "lon": 5.6620219
+      },
+      "row": 2,
+      "metres_from_edge": 9.89,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "446aea6a-9ecc-4800-b1d5-29286f3f15b3",
+      "detected_at": "2026-09-20T07:12:46Z",
+      "severity": "low",
+      "confidence": 0.774,
+      "camera": "left",
+      "bbox": {
+        "x": 0.51917,
+        "y": 0.48562,
+        "w": 0.16299,
+        "h": 0.14112
+      },
+      "location": {
+        "lat": 51.984051,
+        "lon": 5.6620438
+      },
+      "row": 3,
+      "metres_from_edge": 5.68,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "d7778c24-9957-4d03-8318-1e4f24981d7d",
+      "detected_at": "2026-09-19T07:48:09Z",
+      "severity": "low",
+      "confidence": 0.73,
+      "camera": "left",
+      "bbox": {
+        "x": 0.35932,
+        "y": 0.5944,
+        "w": 0.12021,
+        "h": 0.10178
+      },
+      "location": {
+        "lat": 51.9847792,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 86.74,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": "false_positive",
+      "source": "sim"
+    },
+    {
+      "id": "22547764-8a46-4f05-ba71-e8dc133fe45a",
+      "detected_at": "2026-09-19T07:44:21Z",
+      "severity": "moderate",
+      "confidence": 0.695,
+      "camera": "right",
+      "bbox": {
+        "x": 0.1186,
+        "y": 0.41922,
+        "w": 0.19552,
+        "h": 0.2404
+      },
+      "location": {
+        "lat": 51.9847014,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 78.08,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "35ee1acb-608b-4389-abce-682f88bc0d7c",
+      "detected_at": "2026-09-19T07:40:30Z",
+      "severity": "low",
+      "confidence": 0.828,
+      "camera": "right",
+      "bbox": {
+        "x": 0.6535,
+        "y": 0.15129,
+        "w": 0.11974,
+        "h": 0.24421
+      },
+      "location": {
+        "lat": 51.984623,
+        "lon": 5.6621094
+      },
+      "row": 6,
+      "metres_from_edge": 69.35,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "c2ceb7aa-b65b-47a4-bea6-7052734c0373",
+      "detected_at": "2026-09-19T07:38:07Z",
+      "severity": "low",
+      "confidence": 0.682,
+      "camera": "right",
+      "bbox": {
+        "x": 0.49408,
+        "y": 0.3591,
+        "w": 0.12154,
+        "h": 0.11609
+      },
+      "location": {
+        "lat": 51.9845741,
+        "lon": 5.6620219
+      },
+      "row": 2,
+      "metres_from_edge": 63.91,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "b7be6a07-5b65-4e6b-bcba-250c44f63019",
+      "detected_at": "2026-09-19T07:34:20Z",
+      "severity": "low",
+      "confidence": 0.937,
+      "camera": "right",
+      "bbox": {
+        "x": 0.50062,
+        "y": 0.22937,
+        "w": 0.19832,
+        "h": 0.18713
+      },
+      "location": {
+        "lat": 51.984497,
+        "lon": 5.662175
+      },
+      "row": 9,
+      "metres_from_edge": 55.33,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "0eb48ab5-318a-44d2-b467-714a983a6f6e",
+      "detected_at": "2026-09-19T07:32:36Z",
+      "severity": "low",
+      "confidence": 0.821,
+      "camera": "right",
+      "bbox": {
+        "x": 0.09068,
+        "y": 0.37463,
+        "w": 0.10183,
+        "h": 0.10264
+      },
+      "location": {
+        "lat": 51.9844616,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 51.39,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "aphid_colony",
+        "name": "Aphid colony",
+        "scientific_name": "Macrosiphum euphorbiae",
+        "issue_type": "insect",
+        "what_it_is": "Clusters of small soft green or pink insects on new growth and the underside of leaves. They weaken the plant and leave a sticky residue that attracts mold.",
+        "what_to_do": "Knock small colonies off with a strong spray of water. For larger ones use an insecticidal soap. Check the surrounding plants \u2014 they rarely stay in one spot.",
+        "action_within_days": 4
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "ef6eacef-b4bd-4338-82c5-19f3aea44a4d",
+      "detected_at": "2026-09-19T07:30:52Z",
+      "severity": "low",
+      "confidence": 0.726,
+      "camera": "right",
+      "bbox": {
+        "x": 0.65261,
+        "y": 0.28079,
+        "w": 0.12232,
+        "h": 0.24804
+      },
+      "location": {
+        "lat": 51.9844262,
+        "lon": 5.6620875
+      },
+      "row": 5,
+      "metres_from_edge": 47.44,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "ad5d9c9d-8b9a-4d3b-9044-e4e7cbdc89d2",
+      "detected_at": "2026-09-19T07:27:10Z",
+      "severity": "low",
+      "confidence": 0.764,
+      "camera": "left",
+      "bbox": {
+        "x": 0.73107,
+        "y": 0.54761,
+        "w": 0.08947,
+        "h": 0.12854
+      },
+      "location": {
+        "lat": 51.9843508,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 39.05,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "8ce4cfd6-5285-436d-9e02-f31743857452",
+      "detected_at": "2026-09-19T07:17:24Z",
+      "severity": "low",
+      "confidence": 0.887,
+      "camera": "right",
+      "bbox": {
+        "x": 0.31201,
+        "y": 0.67134,
+        "w": 0.15291,
+        "h": 0.25384
+      },
+      "location": {
+        "lat": 51.9841512,
+        "lon": 5.662
+      },
+      "row": 1,
+      "metres_from_edge": 16.83,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "0127e666-f817-403a-9f07-95e346b10a6d",
+      "detected_at": "2026-09-19T07:17:02Z",
+      "severity": "moderate",
+      "confidence": 0.69,
+      "camera": "right",
+      "bbox": {
+        "x": 0.50481,
+        "y": 0.12565,
+        "w": 0.19794,
+        "h": 0.10063
+      },
+      "location": {
+        "lat": 51.9841436,
+        "lon": 5.6621532
+      },
+      "row": 8,
+      "metres_from_edge": 15.99,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "leaf_mold",
+        "name": "Leaf mold",
+        "scientific_name": "Passalora fulva",
+        "issue_type": "fungus",
+        "what_it_is": "Pale yellow blotches on the top of the leaf with olive-grey fuzz underneath. It takes hold where air does not move well and humidity stays high.",
+        "what_to_do": "Improve airflow: thin the leaves and widen the gaps between plants. Lower the humidity if you can. Spray only if it keeps spreading after that.",
+        "action_within_days": 5
+      },
+      "inspection_status": null,
+      "source": "sim"
+    },
+    {
+      "id": "c0ccb626-3f64-46eb-a21e-c6336d2b1f8c",
+      "detected_at": "2026-09-19T07:12:33Z",
+      "severity": "low",
+      "confidence": 0.69,
+      "camera": "left",
+      "bbox": {
+        "x": 0.09076,
+        "y": 0.39939,
+        "w": 0.1931,
+        "h": 0.16032
+      },
+      "location": {
+        "lat": 51.9840524,
+        "lon": 5.6620219
+      },
+      "row": 2,
+      "metres_from_edge": 5.83,
+      "image_url": null,
+      "crop_url": null,
+      "issue": {
+        "code": "early_blight",
+        "name": "Early blight",
+        "scientific_name": "Alternaria solani",
+        "issue_type": "fungus",
+        "what_it_is": "A common fungus that shows as brown spots with rings, like a target, starting on the older leaves near the ground. It spreads slowly upward.",
+        "what_to_do": "Pick off affected lower leaves and clear debris from around the stem. Spray if it reaches more than a few plants in a row. Water at the base, not from above.",
+        "action_within_days": 7
+      },
+      "inspection_status": null,
+      "source": "sim"
+    }
+  ],
+  "next_cursor": null
+}

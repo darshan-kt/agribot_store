@@ -1,0 +1,202 @@
+{
+  "id": "ced650ca-a1d7-49d1-99d6-0eb5861ca013",
+  "name": "B-4",
+  "crop": "Tomato",
+  "row_count": 9,
+  "area_hectares": 0.166,
+  "centroid": {
+    "lat": 51.9844492,
+    "lon": 5.6620875
+  },
+  "boundary": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.661970828,
+          51.983982034
+        ],
+        [
+          5.662204201,
+          51.983982034
+        ],
+        [
+          5.662204201,
+          51.984916277
+        ],
+        [
+          5.661970828,
+          51.984916277
+        ],
+        [
+          5.661970828,
+          51.983982034
+        ]
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "row_number": 1,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662,
+            51.984
+          ],
+          [
+            5.662,
+            51.984898311
+          ]
+        ]
+      }
+    },
+    {
+      "row_number": 2,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662021879,
+            51.984
+          ],
+          [
+            5.662021879,
+            51.984898311
+          ]
+        ]
+      }
+    },
+    {
+      "row_number": 3,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662043757,
+            51.984
+          ],
+          [
+            5.662043757,
+            51.984898311
+          ]
+        ]
+      }
+    },
+    {
+      "row_number": 4,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662065636,
+            51.984
+          ],
+          [
+            5.662065636,
+            51.984898311
+          ]
+        ]
+      }
+    },
+    {
+      "row_number": 5,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662087515,
+            51.984
+          ],
+          [
+            5.662087515,
+            51.984898311
+          ]
+        ]
+      }
+    },
+    {
+      "row_number": 6,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662109393,
+            51.984
+          ],
+          [
+            5.662109393,
+            51.984898311
+          ]
+        ]
+      }
+    },
+    {
+      "row_number": 7,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662131272,
+            51.984
+          ],
+          [
+            5.662131272,
+            51.984898311
+          ]
+        ]
+      }
+    },
+    {
+      "row_number": 8,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662153151,
+            51.984
+          ],
+          [
+            5.662153151,
+            51.984898311
+          ]
+        ]
+      }
+    },
+    {
+      "row_number": 9,
+      "length_m": 100.0,
+      "plant_count": 200,
+      "path": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.662175029,
+            51.984
+          ],
+          [
+            5.662175029,
+            51.984898311
+          ]
+        ]
+      }
+    }
+  ]
+}

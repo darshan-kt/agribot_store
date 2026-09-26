@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+@import '@agri/ui/tokens.css';
+
+@source '../../../../packages/ui/src';
+
+html {
+  /* Keeps native form controls and scrollbars in step with the token palette. */
+  color-scheme: light;
+}
+
+:root[data-theme='dark'],
+:root:not([data-theme='light']) {
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Telemetry figures never reflow as they change. */
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+ * The backstop for reduced motion. Components already gate their animations behind
+ * Tailwind's motion-safe:, but a third-party or future component that forgets is still
+ * caught here.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

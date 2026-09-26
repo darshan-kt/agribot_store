@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/sensors.json",
+  "title": "Sensors",
+  "description": "1 Hz on agri/v1/{robot_id}/sensors. Backs the Dashboard sensor list. Each sensor carries its own ok/check/fault status decided on the robot, which knows its own tolerances; the backend does not re-derive health from raw values. Warnings are machine codes, not sentences, so farmer-facing copy lives in the frontend and stays translatable.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["cameras", "gps", "imu", "lidar", "weather", "encoders"],
+  "properties": {
+    "cameras": {
+      "type": "object",
+      "title": "CameraSensors",
+      "required": ["left", "right"],
+      "properties": {
+        "left": {
+          "type": "object",
+          "title": "CameraSensor",
+          "description": "Left camera.",
+          "required": ["status", "width", "height", "fps"],
+          "properties": {
+            "status": {
+              "$ref": "../common/envelope.json#/$defs/SensorStatus"
+            },
+            "width": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "height": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "fps": {
+              "type": "number",
+              "minimum": 0
+            },
+            "dropped_frames": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "right": {
+          "$ref": "#/properties/cameras/properties/left"
+        }
+      },
+      "additionalProperties": false
+    },
+    "gps": {
+      "type": "object",
+      "title": "GpsSensor",
+      "description": "RTK GPS receiver.",
+      "required": ["status", "fix_type", "accuracy_m", "satellites"],
+      "properties": {
+        "status": {
+          "$ref": "../common/envelope.json#/$defs/SensorStatus"
+        },
+        "fix_type": {
+          "type": "string",
+          "enum": ["none", "2d", "3d", "dgps", "rtk_float", "rtk_fixed"]
+        },
+        "accuracy_m": {
+          "type": "number",
+          "minimum": 0
+        },
+        "satellites": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "position": {
+          "$ref": "../common/envelope.json#/$defs/LatLon"
+        }
+      },
+      "additionalProperties": false
+    },
+    "imu": {
+      "type": "object",
+      "title": "ImuSensor",
+      "description": "Inertial measurement unit.",
+      "required": ["status", "roll_deg", "pitch_deg", "yaw_deg"],
+      "properties": {
+        "status": {
+          "$ref": "../common/envelope.json#/$defs/SensorStatus"
+        },
+        "roll_deg": {
+          "type": "number"
+        },
+        "pitch_deg": {
+          "type": "number"
+        },
+        "yaw_deg": {
+          "type": "number"
+        },
+        "accel_mps2": {
+          "type": "object",
+          "title": "Vector3",
+          "required": ["x", "y", "z"],
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "gyro_dps": {
+          "$ref": "#/properties/imu/properties/accel_mps2"
+        }
+      },
+      "additionalProperties": false
+    },
+    "lidar": {
+      "type": "object",
+      "title": "LidarSensor",
+      "description": "Forward-facing obstacle lidar. Feeds the obstacle-stop interlock.",
+      "required": ["status", "nearest_obstacle_m"],
+      "properties": {
+        "status": {
+          "$ref": "../common/envelope.json#/$defs/SensorStatus"
+        },
+        "nearest_obstacle_m": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Null when nothing is within range."
+        },
+        "bearing_deg": {
+          "type": ["number", "null"]
+        },
+        "range_max_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "weather": {
+      "type": "object",
+      "title": "WeatherSensor",
+      "description": "On-board temperature and humidity. High humidity after rain is the condition that drives blight, so this sensor is what raises the blight-risk advisory.",
+      "required": ["status", "temperature_c", "humidity_percent"],
+      "properties": {
+        "status": {
+          "$ref": "../common/envelope.json#/$defs/SensorStatus"
+        },
+        "temperature_c": {
+          "type": "number"
+        },
+        "humidity_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["high_humidity_blight_risk", "temperature_out_of_range", "sensor_stale"]
+          },
+          "description": "Machine codes. The UI maps each to a plain-language sentence."
+        }
+      },
+      "additionalProperties": false
+    },
+    "encoders": {
+      "type": "object",
+      "title": "EncoderSensor",
+      "description": "Wheel encoders, used for odometry and the speed interlock.",
+      "required": ["status", "left_rpm", "right_rpm"],
+      "properties": {
+        "status": {
+          "$ref": "../common/envelope.json#/$defs/SensorStatus"
+        },
+        "left_rpm": {
+          "type": "number"
+        },
+        "right_rpm": {
+          "type": "number"
+        },
+        "left_ticks": {
+          "type": "integer"
+        },
+        "right_ticks": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

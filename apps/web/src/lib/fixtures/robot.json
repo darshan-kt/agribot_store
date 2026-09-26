@@ -1,0 +1,115 @@
+{
+  "id": "4dbc6e35-67fa-4549-b0c3-ab67046f354b",
+  "robot_id": "scout-01",
+  "name": "Scout-01",
+  "model": "AgriScout R2",
+  "firmware": "2.4.1",
+  "online": true,
+  "last_seen_at": "2026-09-25T11:46:44Z",
+  "mode": "idle",
+  "estop_engaged": false,
+  "battery_percent": 78.27,
+  "field": {
+    "id": "ced650ca-a1d7-49d1-99d6-0eb5861ca013",
+    "name": "B-4"
+  },
+  "row": 7,
+  "source": "sim",
+  "sensors": [
+    {
+      "sensor": "camera_left",
+      "status": "ok",
+      "readings": {
+        "fps": 15.0,
+        "width": 1920,
+        "height": 1080,
+        "dropped_frames": 2
+      },
+      "updated_at": "2026-09-25T11:45:44Z",
+      "source": "sim"
+    },
+    {
+      "sensor": "camera_right",
+      "status": "ok",
+      "readings": {
+        "fps": 15.0,
+        "width": 1920,
+        "height": 1080,
+        "dropped_frames": 0
+      },
+      "updated_at": "2026-09-25T11:45:44Z",
+      "source": "sim"
+    },
+    {
+      "sensor": "encoders",
+      "status": "ok",
+      "readings": {
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_ticks": 8814422,
+        "right_ticks": 8813977
+      },
+      "updated_at": "2026-09-25T11:45:44Z",
+      "source": "sim"
+    },
+    {
+      "sensor": "gps",
+      "status": "ok",
+      "readings": {
+        "fix_type": "rtk_fixed",
+        "accuracy_m": 0.021,
+        "satellites": 19
+      },
+      "updated_at": "2026-09-25T11:45:44Z",
+      "source": "sim"
+    },
+    {
+      "sensor": "imu",
+      "status": "ok",
+      "readings": {
+        "yaw_deg": 3.2,
+        "roll_deg": 0.8,
+        "pitch_deg": -1.4
+      },
+      "updated_at": "2026-09-25T11:45:44Z",
+      "source": "sim"
+    },
+    {
+      "sensor": "lidar",
+      "status": "ok",
+      "readings": {
+        "bearing_deg": 12.0,
+        "range_max_m": 12.0,
+        "nearest_obstacle_m": 4.6
+      },
+      "updated_at": "2026-09-25T11:45:44Z",
+      "source": "sim"
+    },
+    {
+      "sensor": "weather",
+      "status": "check",
+      "readings": {
+        "warnings": [
+          "high_humidity_blight_risk"
+        ],
+        "temperature_c": 21.4,
+        "humidity_percent": 88.0
+      },
+      "updated_at": "2026-09-25T11:45:44Z",
+      "source": "sim"
+    }
+  ],
+  "active_config": {
+    "id": "fc5e07e7-4145-4792-bde4-a8f9a561fcfe",
+    "version": 1,
+    "created_at": "2026-09-25T11:46:44.544225Z",
+    "created_by": null,
+    "acked_at": "2026-09-16T11:46:44Z",
+    "rejected_reason": null,
+    "max_speed_mps": 0.8,
+    "detection_sensitivity": 0.65,
+    "return_to_base_battery_percent": 20,
+    "camera_fps": 15,
+    "obstacle_stop_enabled": true
+  }
+}

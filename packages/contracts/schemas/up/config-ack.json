@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/config-ack.json",
+  "title": "ConfigAck",
+  "description": "QoS 1 on agri/v1/{robot_id}/config/ack. Configuration is shown as 'pending' in the UI until an ack with the matching version arrives. A setting the robot never confirmed is never displayed as applied.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["config_version", "accepted"],
+  "properties": {
+    "config_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "accepted": {
+      "type": "boolean"
+    },
+    "rejected_reason": {
+      "type": ["string", "null"]
+    },
+    "effective": {
+      "type": "object",
+      "title": "EffectiveConfig",
+      "description": "What the robot is actually running now, echoed back rather than assumed from the request.",
+      "required": [
+        "max_speed_mps",
+        "detection_sensitivity",
+        "return_to_base_battery_percent",
+        "camera_fps",
+        "obstacle_stop_enabled"
+      ],
+      "properties": {
+        "max_speed_mps": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 5
+        },
+        "detection_sensitivity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "return_to_base_battery_percent": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 95
+        },
+        "camera_fps": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "obstacle_stop_enabled": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

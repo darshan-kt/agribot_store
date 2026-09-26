@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/down/cmd-sprayer.json",
+  "title": "SprayerCommand",
+  "description": "QoS 1 on agri/v1/{robot_id}/cmd/sprayer.\n\nSAFETY: this opens a pesticide valve. The backend refuses to publish 'spray_start' unless the robot is armed, inside the field geofence, under the speed limit, has tank remaining and has no e-stop engaged; the robot then checks the identical set again before actuating. 'arm' requires an explicit operator confirmation in the UI and auto-reverses on disconnect or lease expiry.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["action", "issued_by"],
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": ["arm", "disarm", "spray_start", "spray_stop", "configure"]
+    },
+    "confirmed": {
+      "type": "boolean",
+      "description": "Must be true for 'arm'. Records that a human passed the confirmation step rather than mis-tapping a toggle."
+    },
+    "nozzle_height_cm": {
+      "type": "number",
+      "minimum": 20,
+      "maximum": 90
+    },
+    "arc_deg": {
+      "$ref": "../common/envelope.json#/$defs/SprayArc"
+    },
+    "flow_lpm": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "duration_ms": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 30000,
+      "description": "Bounded burst for hold-to-spray. Null means spray until 'spray_stop'; the robot still applies its own maximum so a lost stop message cannot empty the tank."
+    },
+    "issued_by": {
+      "type": "string",
+      "format": "uuid",
+      "description": "User id of the operator. Written to audit_log with the command; every command is attributable to a person."
+    },
+    "lease_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "Control lease held by that operator. The backend rejects a command whose lease has expired or is held by someone else."
+    }
+  },
+  "unevaluatedProperties": false
+}

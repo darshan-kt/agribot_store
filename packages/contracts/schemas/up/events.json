@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agri.example/contracts/v1/up/events.json",
+  "title": "RobotEvent",
+  "description": "QoS 1 on agri/v1/{robot_id}/events. Discrete things that happened, as opposed to sampled values. Safety-relevant kinds are written to audit_log and raised as operator alerts.",
+  "allOf": [
+    {
+      "$ref": "../common/envelope.json"
+    }
+  ],
+  "type": "object",
+  "required": ["kind", "severity"],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": [
+        "heartbeat",
+        "estop_engaged",
+        "estop_cleared",
+        "deadman_timeout",
+        "obstacle_stop",
+        "geofence_violation",
+        "spray_blocked",
+        "tank_empty",
+        "tank_low",
+        "low_battery",
+        "returning_to_base",
+        "mission_started",
+        "mission_completed",
+        "mission_failed",
+        "sensor_fault",
+        "broker_reconnected"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warning", "critical"]
+    },
+    "message": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "Operator-readable summary. Plain language, sentence case, no jargon."
+    },
+    "detail": {
+      "type": "object",
+      "description": "Free-form context for the log. Never rendered to a farmer.",
+      "additionalProperties": true
+    }
+  },
+  "unevaluatedProperties": false
+}
